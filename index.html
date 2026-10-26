@@ -3,38 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Бубенко Виктория Сергеевна — учитель физической культуры</title>
+<title>Персональный сайт учителя физической культуры Бубенко В.С.</title>
 <style>
-  body { font-family: Georgia, serif; margin: 0; background: #f0f7f0; color: #233; }
-  .top { background: #1e7a34; color: #fff; padding: 30px 18px; text-align: center; }
-  .top h1 { margin: 0; font-size: 30px; }
-  .top p { margin: 8px 0 0; font-size: 17px; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 24px; }
-  h2 { color: #1e7a34; border-bottom: 3px solid #f5a623; padding-bottom: 6px; }
-  .btns { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
-  .btn { display: block; background: #1e7a34; color: #fff; padding: 16px 24px; border-radius: 12px; text-decoration: none; font-size: 18px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,.15); }
-  .btn:hover { background: #145024; }
-  .btn small { display: block; font-size: 13px; font-weight: normal; margin-top: 4px; opacity: .85; }
-  .info { background: #fff; border: 1px solid #cfe3cf; border-radius: 12px; padding: 16px 20px; margin: 16px 0; line-height: 1.55; }
-  .foot { text-align: center; color: #567; font-size: 14px; padding: 20px; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #e8f4fd 0%, #f7fbff 100%);
+    min-height: 100vh;
+    color: #222;
+  }
+  header {
+    background: linear-gradient(135deg, #1a6fc4 0%, #2e9be6 100%);
+    color: #fff;
+    padding: 40px 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  header h1 { margin: 0 0 10px; font-size: 28px; }
+  header p { margin: 4px 0; font-size: 16px; opacity: 0.95; }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px 16px 50px;
+  }
+  .about {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .about h2 { margin-top: 0; color: #1a6fc4; font-size: 20px; }
+  .menu { display: flex; flex-direction: column; gap: 16px; }
+  .menu a.btn {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #2e9be6 0%, #1a6fc4 100%);
+    border-radius: 14px;
+    padding: 18px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .menu a.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,0.2); }
+  .menu a.btn span.emoji { font-size: 24px; margin-right: 12px; }
+  .menu a.btn small { display: block; font-weight: normal; font-size: 13px; opacity: 0.9; margin-top: 4px; }
+  footer {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    padding: 20px 10px 30px;
+  }
 </style>
 </head>
 <body>
-<div class="top">
+<header>
   <h1>Бубенко Виктория Сергеевна</h1>
-  <p>Учитель физической культуры, МБОУ «Макушинская СОШ № 1»</p>
-</div>
-<div class="wrap">
-  <h2>Материалы для ознакомления</h2>
-  <div class="info">
-    На этой странице размещены методические материалы и разработки, отражающие профессиональную деятельность педагога.
+  <p>Учитель физической культуры</p>
+  <p>МБОУ «Макушинская средняя общеобразовательная школа № 1», Курганская область</p>
+</header>
+<main>
+  <div class="about">
+    <h2>Добро пожаловать!</h2>
+    На этом сайте собраны мои методические материалы, разработки мероприятий и полезная информация для учеников и родителей.
   </div>
-  <div class="btns">
-    <a class="btn" href="igry.html">🏃 Сборник подвижных игр для 1–11 классов<small>15 популярных школьных игр: по 5 на каждую параллель</small></a>
-    <a class="btn" href="meropriyatiya.html">📋 Разработки внеурочных мероприятий<small>День здоровья, Зима спортивная, Малые олимпийские игры, Зимние узоры и другие</small></a>
-    <a class="btn" href="metodiki.html">📚 Методические материалы по технологиям<small>Игровая технология, здоровьесбережение, дифференцированный подход</small></a>
+  <div class="menu">
+    <a class="btn" href="igry.html"><span class="emoji">🏃</span>Сборник подвижных игр 1–11 классы<small>описания игр для уроков и перемен</small></a>
+    <a class="btn" href="meropriyatiya.html"><span class="emoji">📋</span>Разработки внеурочных мероприятий<small>«День здоровья», «Зима спортивная», «Малые олимпийские игры» и другие</small></a>
+    <a class="btn" href="metodiki.html"><span class="emoji">📚</span>Методические материалы по технологиям<small>игровая технология, здоровьесбережение, дифференцированный подход</small></a>
+    <a class="btn" href="normativy.html"><span class="emoji">🏆</span>Тесты и нормативы<small>нормативы ГТО и школьные тесты по возрастам</small></a>
+    <a class="btn" href="podgotovka.html"><span class="emoji">💪</span>Как подготовиться к нормативам<small>советы по разминке, бегу и отжиманиям на каждый день</small></a>
   </div>
-</div>
-<div class="foot">© Бубенко Виктория Сергеевна, 2026</div>
+</main>
+<footer>© 2026 Бубенко В.С. Персональный сайт учителя физической культуры</footer>
 </body>
 </html>
