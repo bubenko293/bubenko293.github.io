@@ -1,356 +1,115 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Сайт учителя физической культуры — Бубенко В. С.</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family:'Segoe UI', Arial, sans-serif;
-    background:linear-gradient(160deg,#EAF4FB 0%, #F4F9EE 55%, #EDF7F2 100%);
-    color:#3A3A3A; min-height:100vh;
-  }
-  .topline {
-    text-align:center; padding:18px 16px 6px;
-    font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:#7A8B99;
-  }
-  .banner { max-width:980px; margin:6px auto 0; padding:0 16px; }
-  .banner svg { width:100%; height:auto; display:block; border-radius:24px;
-    box-shadow:0 10px 30px rgba(60,90,120,.15); }
-  main { max-width:980px; margin:0 auto; padding:10px 16px 0; }
-  .intro { background:#fff; border-radius:20px; padding:26px 30px; margin:26px 0 10px;
-    box-shadow:0 6px 18px rgba(60,90,120,.08); line-height:1.65; font-size:16.5px; }
-  .intro b { color:#2F6FB2; }
-  h2 { text-align:center; margin:30px 0 4px; font-size:30px; color:#2E4A5F; }
-  .sub { text-align:center; color:#7A8B99; margin-bottom:24px; font-size:16px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-bottom:26px; }
-  .card {
-    background:#fff; border-radius:20px; padding:24px 22px; text-decoration:none; color:inherit;
-    display:block; position:relative; overflow:hidden;
-    box-shadow:0 5px 16px rgba(60,90,120,.09);
-    transition:transform .18s ease, box-shadow .18s ease;
-    border-top:6px solid var(--c);
-  }
-  .card:hover { transform:translateY(-5px); box-shadow:0 12px 26px rgba(60,90,120,.16); }
-  .card .emoji { font-size:42px; }
-  .card h3 { margin:10px 0 8px; font-size:20px; color:var(--c); }
-  .card p { font-size:15px; line-height:1.55; color:#5A6570; }
-  .card .go { display:inline-block; margin-top:14px; font-weight:700; color:var(--c); font-size:15px; }
-  .about { background:#fff; border-radius:20px; padding:26px 30px; margin-bottom:26px;
-    box-shadow:0 6px 18px rgba(60,90,120,.08); line-height:1.65; font-size:16px; }
-  footer { text-align:center; padding:26px 16px 34px; color:#8A96A1; font-size:14px; line-height:1.7; }
-  footer b { color:#5A6570; }
+  body { font-family:'Segoe UI',Verdana,Arial,sans-serif; background:linear-gradient(160deg,#eaf4fb 0%,#eef9f0 100%); color:#243447; }
+  .wrap { max-width:1080px; margin:0 auto; padding:24px 16px 40px; }
+  .banner { position:relative; background:#fff; border-radius:26px; overflow:hidden;
+            box-shadow:0 10px 30px rgba(30,60,90,.10); }
+  .banner svg { display:block; width:100%; height:auto; }
+  .hero-text { position:absolute; top:34px; left:0; right:0; text-align:center; padding:0 20px; }
+  .hero-text h1 { font-size:clamp(26px,4.6vw,44px); color:#1f3a5f; letter-spacing:.5px; }
+  .hero-text p { margin-top:8px; font-size:clamp(14px,2vw,19px); color:#4a5b70; }
+  .hero-text .sub { margin-top:4px; font-size:15px; color:#7a8aa0; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-top:34px; }
+  .card { display:block; text-decoration:none; background:#fff; border-radius:18px; padding:22px 20px 20px;
+          box-shadow:0 6px 18px rgba(30,60,90,.08); border-top:6px solid var(--c,#4aa3df);
+          transition:transform .18s ease, box-shadow .18s ease; }
+  .card:hover { transform:translateY(-5px); box-shadow:0 14px 28px rgba(30,60,90,.14); }
+  .card .ico { font-size:44px; line-height:1; }
+  .card h2 { margin-top:10px; font-size:20px; color:#1f3a5f; }
+  .card p { margin-top:6px; font-size:15px; color:#5a6b80; line-height:1.45; }
+  .about { margin-top:34px; background:#fff; border-radius:18px; padding:24px;
+           box-shadow:0 6px 18px rgba(30,60,90,.08); }
+  .about h2 { color:#1f3a5f; font-size:22px; }
+  .about p { margin-top:10px; line-height:1.6; color:#44566c; font-size:16px; }
+  footer { margin-top:34px; text-align:center; color:#7a8aa0; font-size:14px; line-height:1.6;
+           border-top:4px solid; border-image:linear-gradient(90deg,#2b6fd4,#2fae4e,#f2b705,#ef7d1a,#d93b4a) 1;
+           padding-top:16px; }
 </style>
 </head>
 <body>
-
-<div class="topline">Физическая культура &middot; Макушинская СОШ № 1</div>
-
-<div class="banner">
-<svg viewBox="0 0 960 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Дети занимаются спортом">
-  <!-- фон -->
-  <rect width="960" height="430" rx="24" fill="#FDF6EC"/>
-  <ellipse cx="170" cy="80" rx="270" ry="140" fill="#FBE7D0"/>
-  <ellipse cx="830" cy="340" rx="250" ry="170" fill="#EAE6F4"/>
-  <ellipse cx="470" cy="-30" rx="230" ry="90" fill="#FFF9F0"/>
-
-  <!-- пунктирные дорожки вокруг центра -->
-  <path d="M 215 215 C 275 150, 340 265, 255 330 S 330 415, 430 372" stroke="#F59E4C" stroke-width="4" fill="none" stroke-dasharray="1 13" stroke-linecap="round"/>
-  <path d="M 745 205 C 690 150, 775 120, 750 70" stroke="#5AA7E8" stroke-width="4" fill="none" stroke-dasharray="1 13" stroke-linecap="round"/>
-  <path d="M 300 95 C 360 70, 380 130, 330 150" stroke="#B39BD8" stroke-width="4" fill="none" stroke-dasharray="1 13" stroke-linecap="round"/>
-
-  <!-- звёздочки -->
-  <g fill="#F7C531">
-    <circle cx="300" cy="55" r="4"/><circle cx="690" cy="40" r="4"/>
-    <circle cx="250" cy="250" r="4" fill="#7CC0EC"/><circle cx="700" cy="250" r="4" fill="#B39BD8"/>
-  </g>
-
-  <!-- ЗАГОЛОВОК в центре -->
-  <text x="480" y="180" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="42" font-weight="800" fill="#4A3B2A">Сайт учителя</text>
-  <text x="480" y="232" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="42" font-weight="800" fill="#4A3B2A">физической культуры</text>
-  <text x="480" y="272" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="600" fill="#7A6A55">Бубенко В. С. &#183; Макушинская СОШ № 1 &#183; г. Макушино</text>
-  <text x="480" y="308" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#9A8B77">1–11 классы &#183; разминка, игры, нормативы, ЗОЖ</text>
-
-  <!-- 1. Мальчик с битой (слева сверху) -->
-  <g transform="translate(60,52)">
-    <path d="M -20 -10 A 20 20 0 0 1 20 -10 Z" fill="#E8574A"/>
-    <rect x="-27" y="-12" width="26" height="7" rx="3.5" fill="#C74639"/>
-    <circle cx="0" cy="8" r="17" fill="#FFD9B3"/>
-    <path d="M -13 2 Q 0 -3 13 2 L 13 6 Q 0 1 -13 6 Z" fill="#8A5A33"/>
-    <circle cx="-6" cy="10" r="1.9" fill="#3A2E23"/><circle cx="6" cy="10" r="1.9" fill="#3A2E23"/>
-    <path d="M -5 15 Q 0 19 5 15" stroke="#3A2E23" stroke-width="1.7" fill="none" stroke-linecap="round"/>
-    <rect x="-14" y="26" width="28" height="26" rx="10" fill="#AFC6E6"/>
-    <path d="M -12 32 L -24 44" stroke="#FFD9B3" stroke-width="6" stroke-linecap="round"/>
-    <path d="M 12 32 L 27 18" stroke="#FFD9B3" stroke-width="6" stroke-linecap="round"/>
-    <line x1="26" y1="22" x2="40" y2="-2" stroke="#C98A4B" stroke-width="7" stroke-linecap="round"/>
-    <path d="M -7 52 L -8 68" stroke="#5B4632" stroke-width="5.5" stroke-linecap="round"/>
-    <path d="M 7 52 L 8 68" stroke="#5B4632" stroke-width="5.5" stroke-linecap="round"/>
-    <ellipse cx="-10" cy="70" rx="7" ry="4" fill="#3A2E23"/><ellipse cx="10" cy="70" rx="7" ry="4" fill="#3A2E23"/>
-  </g>
-
-  <!-- 2. Груша боксёрская (слева) -->
-  <g transform="translate(20,140)">
-    <line x1="0" y1="-40" x2="0" y2="-24" stroke="#8A8F98" stroke-width="3"/>
-    <rect x="-12" y="-26" width="24" height="10" rx="5" fill="#C74639"/>
-    <rect x="-13" y="-18" width="26" height="58" rx="12" fill="#F7C531"/>
-    <path d="M -8 -6 Q -14 12 -8 28 M 8 -6 Q 14 12 8 28" stroke="#E5A81E" stroke-width="3" fill="none"/>
-  </g>
-
-  <!-- 3. Девочка каратистка (слева) -->
-  <g transform="translate(62,225)">
-    <circle cx="0" cy="-14" r="15" fill="#FFD9B3"/>
-    <path d="M -15 -18 A 15 15 0 0 1 15 -18 L 15 -12 Q 0 -18 -15 -12 Z" fill="#F0A04B"/>
-    <circle cx="-13" cy="-24" r="5" fill="#F0A04B"/><circle cx="13" cy="-24" r="5" fill="#F0A04B"/>
-    <circle cx="-5" cy="-12" r="1.8" fill="#3A2E23"/><circle cx="5" cy="-12" r="1.8" fill="#3A2E23"/>
-    <path d="M -4 -7 Q 0 -4 4 -7" stroke="#3A2E23" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-    <path d="M -16 4 L 16 4 L 12 46 L -12 46 Z" fill="#FFFFFF" stroke="#E4DCD2" stroke-width="1.5"/>
-    <rect x="-15" y="14" width="30" height="7" rx="3.5" fill="#E8574A"/>
-    <path d="M -14 10 L -32 2" stroke="#FFD9B3" stroke-width="6" stroke-linecap="round"/>
-    <path d="M 14 10 L 30 20" stroke="#FFD9B3" stroke-width="6" stroke-linecap="round"/>
-  </g>
-
-  <!-- 4. Байдарка (слева снизу) -->
-  <g transform="translate(78,330)">
-    <path d="M -48 8 Q 0 24 48 8 L 40 -2 Q 0 8 -40 -2 Z" fill="#F08A3C"/>
-    <circle cx="0" cy="-14" r="12" fill="#FFD9B3"/>
-    <path d="M -12 -18 A 12 12 0 0 1 12 -18 Z" fill="#F7C531"/>
-    <circle cx="-4" cy="-12" r="1.6" fill="#3A2E23"/><circle cx="4" cy="-12" r="1.6" fill="#3A2E23"/>
-    <rect x="-11" y="-4" width="22" height="14" rx="6" fill="#5AA7E8"/>
-    <line x1="-34" y1="-30" x2="30" y2="-6" stroke="#8A5A33" stroke-width="3.5" stroke-linecap="round"/>
-    <ellipse cx="-36" cy="-32" rx="8" ry="4.5" fill="#5AA7E8" transform="rotate(-18 -36 -32)"/>
-    <ellipse cx="32" cy="-4" rx="8" ry="4.5" fill="#5AA7E8" transform="rotate(-18 32 -4)"/>
-    <circle cx="-30" cy="22" r="4" fill="#7CC0EC"/><circle cx="0" cy="26" r="4" fill="#7CC0EC"/>
-  </g>
-
-  <!-- 5. Волейбольная сетка, мяч, ракетка (слева снизу, угол) -->
-  <g transform="translate(75,398)">
-    <rect x="-55" y="-42" width="5" height="52" rx="2.5" fill="#39B8B0"/>
-    <rect x="15" y="-42" width="5" height="52" rx="2.5" fill="#39B8B0"/>
-    <g stroke="#9BB0C4" stroke-width="1.6">
-      <line x1="-50" y1="-36" x2="20" y2="-36"/><line x1="-50" y1="-28" x2="20" y2="-28"/>
-      <line x1="-50" y1="-20" x2="20" y2="-20"/><line x1="-50" y1="-12" x2="20" y2="-12"/>
-      <line x1="-38" y1="-42" x2="-38" y2="-8"/><line x1="-24" y1="-42" x2="-24" y2="-8"/>
-      <line x1="-10" y1="-42" x2="-10" y2="-8"/><line x1="4" y1="-42" x2="4" y2="-8"/>
-    </g>
-    <circle cx="42" cy="-24" r="13" fill="#F7C531"/>
-    <path d="M 32 -28 Q 42 -22 52 -28 M 40 -36 Q 44 -24 40 -12" stroke="#E5A81E" stroke-width="2" fill="none"/>
-    <ellipse cx="-22" cy="0" rx="11" ry="16" fill="none" stroke="#C98A4B" stroke-width="3.5"/>
-    <g stroke="#C98A4B" stroke-width="1.4">
-      <line x1="-31" y1="-4" x2="-13" y2="-4"/><line x1="-31" y1="3" x2="-13" y2="3"/>
-      <line x1="-24" y1="-15" x2="-24" y2="15"/>
-    </g>
-    <line x1="-22" y1="15" x2="-22" y2="30" stroke="#8A5A33" stroke-width="4" stroke-linecap="round"/>
-  </g>
-
-  <!-- 6. Девочка пловчиха (сверху по центру) -->
-  <g transform="translate(210,62)">
-    <path d="M -70 34 Q -50 14 -30 34 T 10 34 T 50 34 T 90 34 L 90 52 Q 0 62 -70 52 Z" fill="#7CC0EC"/>
-    <path d="M -62 40 Q -48 30 -34 40 M -18 40 Q -4 30 10 40 M 26 40 Q 40 30 54 40" stroke="#5AA7E8" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <circle cx="-52" cy="18" r="4" fill="#FFFFFF"/><circle cx="58" cy="14" r="5" fill="#FFFFFF"/><circle cx="30" cy="8" r="3.5" fill="#FFFFFF"/>
-    <circle cx="0" cy="-6" r="15" fill="#FFD9B3"/>
-    <circle cx="-13" cy="-16" r="6" fill="#8A5A33"/><circle cx="13" cy="-16" r="6" fill="#8A5A33"/>
-    <path d="M -15 -10 A 15 15 0 0 1 15 -10 L 15 -4 Q 0 -10 -15 -4 Z" fill="#8A5A33"/>
-    <circle cx="-5" cy="-5" r="4.5" fill="#FFFFFF" stroke="#5AA7E8" stroke-width="1.8"/>
-    <circle cx="5" cy="-5" r="4.5" fill="#FFFFFF" stroke="#5AA7E8" stroke-width="1.8"/>
-    <line x1="-10" y1="-6" x2="10" y2="-6" stroke="#5AA7E8" stroke-width="1.8"/>
-    <path d="M -3 2 Q 0 4 3 2" stroke="#3A2E23" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <ellipse cx="0" cy="16" rx="19" ry="11" fill="#F7C531"/>
-    <path d="M -18 10 L -30 -2" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <path d="M 18 10 L 30 -2" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-  </g>
-
-  <!-- 7. Скейтер (справа сверху) -->
-  <g transform="translate(655,58)">
-    <g transform="rotate(-8)">
-      <rect x="-32" y="30" width="64" height="9" rx="4.5" fill="#5B8FD9"/>
-      <circle cx="-18" cy="44" r="5.5" fill="#3A2E23"/><circle cx="18" cy="44" r="5.5" fill="#3A2E23"/>
-    </g>
-    <circle cx="0" cy="-6" r="15" fill="#FFD9B3"/>
-    <path d="M -15 -10 A 15 15 0 0 1 15 -10 Z" fill="#EE6FA0"/>
-    <path d="M -15 -8 L 15 -8" stroke="#D95C8C" stroke-width="2.5"/>
-    <circle cx="-5" cy="0" r="1.8" fill="#3A2E23"/><circle cx="5" cy="0" r="1.8" fill="#3A2E23"/>
-    <path d="M -4 5 Q 0 8 4 5" stroke="#3A2E23" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-    <rect x="-13" y="8" width="26" height="20" rx="8" fill="#6FBF7B"/>
-    <path d="M -12 14 L -30 8" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <path d="M 12 14 L 30 10" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <path d="M -6 28 L -6 40 M 6 28 L 6 40" stroke="#5B4632" stroke-width="5" stroke-linecap="round"/>
-  </g>
-
-  <!-- 8. Скалолазка (справа сверху) -->
-  <g transform="translate(875,55)">
-    <circle cx="-22" cy="-30" r="6" fill="#F2B3C7"/>
-    <circle cx="24" cy="-22" r="5" fill="#7CC0EC"/>
-    <circle cx="10" cy="-40" r="5" fill="#F7C531"/>
-    <circle cx="-30" cy="0" r="5" fill="#B39BD8"/>
-    <circle cx="26" cy="18" r="6" fill="#F2B3C7"/>
-    <circle cx="0" cy="4" r="14" fill="#FFD9B3"/>
-    <path d="M -14 0 A 14 14 0 0 1 14 0 Z" fill="#EE6FA0"/>
-    <circle cx="-4" cy="6" r="1.7" fill="#3A2E23"/><circle cx="4" cy="6" r="1.7" fill="#3A2E23"/>
-    <path d="M -3 11 Q 0 13.5 3 11" stroke="#3A2E23" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <rect x="-12" y="18" width="24" height="20" rx="8" fill="#6FBF7B"/>
-    <path d="M -11 24 L -26 12" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <path d="M 11 24 L 24 30" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <path d="M -5 38 Q -12 50 -6 58 M 5 38 Q 12 50 6 56" stroke="#5B4632" stroke-width="5" fill="none" stroke-linecap="round"/>
-  </g>
-
-  <!-- 9. Парус (справа) -->
-  <g transform="translate(925,150)">
-    <path d="M 0 -28 L 0 34 L -26 34 Z" fill="#F7C531" stroke="#E5A81E" stroke-width="2"/>
-    <path d="M -8 -14 L -8 26 L -20 26 Z" fill="#FDF6EC"/>
-    <line x1="0" y1="-30" x2="0" y2="38" stroke="#8A5A33" stroke-width="3.5"/>
-    <path d="M 0 38 Q 14 44 24 34" stroke="#E8574A" stroke-width="4" fill="none" stroke-linecap="round"/>
-  </g>
-
-  <!-- 10. Дайвер (справа) -->
-  <g transform="translate(908,235)">
-    <circle cx="0" cy="-34" r="13" fill="#FFD9B3"/>
-    <rect x="-13" y="-42" width="26" height="11" rx="5" fill="#3E5C82"/>
-    <circle cx="-6" cy="-36" r="3" fill="#BFE3F7" stroke="#3E5C82" stroke-width="1.5"/>
-    <circle cx="6" cy="-36" r="3" fill="#BFE3F7" stroke="#3E5C82" stroke-width="1.5"/>
-    <rect x="-13" y="-22" width="26" height="36" rx="11" fill="#F08A3C"/>
-    <rect x="-16" y="-14" width="32" height="9" rx="4.5" fill="#D9782F"/>
-    <path d="M -12 -16 L -36 -8" stroke="#F08A3C" stroke-width="6" stroke-linecap="round"/>
-    <path d="M 12 -16 L 34 -24" stroke="#F08A3C" stroke-width="6" stroke-linecap="round"/>
-    <path d="M -7 14 Q -12 26 -8 34 L -2 34 L -3 16 Z" fill="#3E5C82"/>
-    <path d="M 7 14 Q 12 26 8 34 L 2 34 L 3 16 Z" fill="#3E5C82"/>
-  </g>
-
-  <!-- 11. Футбольный мяч и скакалка (справа снизу) -->
-  <g transform="translate(905,330)">
-    <path d="M -34 -2 Q 6 -38 36 -6" stroke="#E8574A" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-    <circle cx="8" cy="18" r="17" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="2"/>
-    <polygon points="8,10 15,15 12,23 4,23 1,15" fill="#3A2E23"/>
-    <path d="M 8 10 L 8 1 M 15 15 L 23 12 M 12 23 L 16 31 M 4 23 L 0 31 M 1 15 L -8 12" stroke="#3A2E23" stroke-width="2.5" stroke-linecap="round"/>
-  </g>
-
-  <!-- 12. Девочка в очках с баскетбольным мячом (справа снизу, угол) -->
-  <g transform="translate(893,398)">
-    <circle cx="0" cy="-12" r="15" fill="#FFD9B3"/>
-    <path d="M -15 -16 A 15 15 0 0 1 15 -16 L 15 -10 Q 0 -16 -15 -10 Z" fill="#5B4632"/>
-    <circle cx="-16" cy="-18" r="5.5" fill="#5B4632"/><circle cx="16" cy="-18" r="5.5" fill="#5B4632"/>
-    <circle cx="-5.5" cy="-10" r="4.5" fill="none" stroke="#3A2E23" stroke-width="1.7"/>
-    <circle cx="5.5" cy="-10" r="4.5" fill="none" stroke="#3A2E23" stroke-width="1.7"/>
-    <line x1="-1" y1="-10" x2="1" y2="-10" stroke="#3A2E23" stroke-width="1.7"/>
-    <path d="M -3 -3 Q 0 0 3 -3" stroke="#3A2E23" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <rect x="-13" y="2" width="26" height="24" rx="9" fill="#F08A3C"/>
-    <path d="M -12 8 L -26 16" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <path d="M 12 8 L 24 4" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <circle cx="28" cy="0" r="10" fill="#E8833A"/>
-    <path d="M 18 0 L 38 0 M 28 -10 L 28 10 M 21 -6 Q 28 0 21 6 M 35 -6 Q 28 0 35 6" stroke="#B65E1E" stroke-width="1.6" fill="none"/>
-    <path d="M -5 26 L -6 38 M 5 26 L 6 38" stroke="#5B4632" stroke-width="5" stroke-linecap="round"/>
-  </g>
-
-  <!-- 13. Мальчик с баскетбольным мячом (снизу по центру-справа) -->
-  <g transform="translate(775,392)">
-    <circle cx="0" cy="-14" r="15" fill="#FFD9B3"/>
-    <path d="M -15 -18 A 15 15 0 0 1 15 -18 L 15 -12 Q 0 -18 -15 -12 Z" fill="#3A2E23"/>
-    <rect x="-15" y="-17" width="30" height="6" rx="3" fill="#5AA7E8"/>
-    <circle cx="-5" cy="-10" r="1.8" fill="#3A2E23"/><circle cx="5" cy="-10" r="1.8" fill="#3A2E23"/>
-    <path d="M -4 -4 Q 0 -1 4 -4" stroke="#3A2E23" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-    <rect x="-14" y="0" width="28" height="26" rx="9" fill="#E8574A"/>
-    <text x="0" y="19" text-anchor="middle" font-family="Arial" font-size="13" font-weight="800" fill="#FFFFFF">1</text>
-    <path d="M -13 6 L -28 14" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <path d="M 13 6 L 24 14" stroke="#FFD9B3" stroke-width="5.5" stroke-linecap="round"/>
-    <circle cx="30" cy="22" r="11" fill="#E8833A"/>
-    <path d="M 19 22 L 41 22 M 30 11 L 30 33 M 23 16 Q 30 22 23 28 M 37 16 Q 30 22 37 28" stroke="#B65E1E" stroke-width="1.6" fill="none"/>
-    <path d="M -6 26 L -7 40 M 6 26 L 7 40" stroke="#5B4632" stroke-width="5" stroke-linecap="round"/>
-  </g>
-
-  <!-- 14. Велосипед (снизу по центру) -->
-  <g transform="translate(445,388)">
-    <circle cx="-34" cy="8" r="24" fill="none" stroke="#3A2E23" stroke-width="4"/>
-    <circle cx="36" cy="8" r="24" fill="none" stroke="#3A2E23" stroke-width="4"/>
-    <g stroke="#C9CFD6" stroke-width="1.5">
-      <line x1="-34" y1="-14" x2="-34" y2="30"/><line x1="-56" y1="8" x2="-12" y2="8"/>
-      <line x1="14" y1="8" x2="58" y2="8"/><line x1="36" y1="-14" x2="36" y2="30"/>
-    </g>
-    <circle cx="-34" cy="8" r="4" fill="#3A2E23"/><circle cx="36" cy="8" r="4" fill="#3A2E23"/>
-    <path d="M -34 8 L -12 -14 L 24 -14 L 36 8 M -12 -14 L -2 8 L -34 8 M 24 -14 L 18 -24" stroke="#F7C531" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="18" y1="-24" x2="30" y2="-26" stroke="#3A2E23" stroke-width="4" stroke-linecap="round"/>
-    <line x1="-16" y1="-16" x2="-22" y2="-22" stroke="#3A2E23" stroke-width="4" stroke-linecap="round"/>
-    <ellipse cx="-24" cy="-24" rx="8" ry="3" fill="#3A2E23" transform="rotate(-20 -24 -24)"/>
-  </g>
-
-  <!-- 15. Волейбольный мяч (снизу по центру-слева) -->
-  <g transform="translate(560,398)">
-    <circle cx="0" cy="0" r="15" fill="#7CC0EC"/>
-    <path d="M -14 -5 Q 0 3 14 -5 M -8 -14 Q -4 0 -8 14 M 8 -14 Q 4 0 8 14" stroke="#3E7FB8" stroke-width="2" fill="none"/>
-  </g>
-
-  <!-- 16. Теннисный мяч и ракетка у сетки справа-снизу -->
-  <g transform="translate(660,415)">
-    <ellipse cx="0" cy="-6" rx="10" ry="14" fill="#6FBF7B" opacity="0.9"/>
-    <circle cx="18" cy="-2" r="7" fill="#C6E86B"/>
-    <path d="M 12 -2 Q 18 -8 24 -2 M 18 -9 Q 18 -2 18 5" stroke="#8FB53A" stroke-width="1.5" fill="none"/>
-  </g>
-
+<div class="wrap">
+  <div class="banner">
+    <svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Цветные силуэты спортсменов">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfefe"/><stop offset="1" stop-color="#eef3fb"/>
+    </linearGradient>
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2b6fd4"/><stop offset="0.25" stop-color="#2fae4e"/>
+      <stop offset="0.5" stop-color="#f2b705"/><stop offset="0.75" stop-color="#ef7d1a"/>
+      <stop offset="1" stop-color="#d93b4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" rx="26" fill="url(#bg2)"/>
+  <ellipse cx="600" cy="392" rx="470" ry="26" fill="#dfe7f2"/>
+  <g transform="translate(150,300) scale(1.15)" stroke="#2b6fd4" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.92"><circle cx="20" cy="-58" r="12" fill="#2b6fd4" stroke="none"/><polyline points="10,-44 2,-10"/><polyline points="10,-40 32,-28"/><polyline points="10,-40 -10,-30"/><polyline points="2,-10 28,2 40,26"/><polyline points="2,-10 -16,8 -6,32"/></g>
+  <circle cx="52" cy="34" r="13" fill="#2b6fd4" stroke="none" opacity="0.92"/>
+  <g transform="translate(260,296) scale(1.05)" stroke="#5b8fd9" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"><circle cx="20" cy="-58" r="12" fill="#2b6fd4" stroke="none"/><polyline points="10,-44 2,-10"/><polyline points="10,-40 32,-28"/><polyline points="10,-40 -10,-30"/><polyline points="2,-10 28,2 40,26"/><polyline points="2,-10 -16,8 -6,32"/></g>
+  <g transform="translate(395,300) scale(1.25)" stroke="#2fae4e" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.92"><circle cx="2" cy="-66" r="12" fill="#2fae4e" stroke="none"/><polyline points="0,-50 0,-12"/><polyline points="0,-46 24,-64 34,-76"/><polyline points="0,-46 -22,-34"/><polyline points="0,-12 20,2 16,24"/><polyline points="0,-12 -18,4 -26,22"/></g>
+  <circle cx="44" cy="-88" r="11" fill="#2fae4e" stroke="none" opacity="0.92"/>
+  <g transform="translate(505,298) scale(1.05)" stroke="#63c06a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"><circle cx="20" cy="-58" r="12" fill="#2b6fd4" stroke="none"/><polyline points="10,-44 2,-10"/><polyline points="10,-40 32,-28"/><polyline points="10,-40 -10,-30"/><polyline points="2,-10 28,2 40,26"/><polyline points="2,-10 -16,8 -6,32"/></g>
+  <g transform="translate(620,302) scale(1.3)" stroke="#f2b705" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.92"><circle cx="14" cy="-58" r="12" fill="#f2b705" stroke="none"/><polyline points="6,-44 -2,-10"/><polyline points="6,-40 34,-46"/><polyline points="6,-40 -12,-26"/><polyline points="-2,-10 26,-2 36,22"/><polyline points="-2,-10 -16,10 -4,32"/></g>
+  <g transform="translate(760,300) scale(1.2)" stroke="#ef7d1a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.92"><circle cx="12" cy="-56" r="12" fill="#ef7d1a" stroke="none"/><path d="M2,-58 Q-14,-62 -18,-50" stroke-width="9"/><polyline points="4,-42 -2,-10"/><polyline points="4,-38 26,-30"/><polyline points="4,-38 -14,-30"/><polyline points="-2,-10 24,0 34,24"/><polyline points="-2,-10 -18,6 -10,30"/></g>
+  <g transform="translate(880,298) scale(1.05)" stroke="#f09a3e" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"><circle cx="-16" cy="-58" r="12" fill="#8e44ad" stroke="none"/><polyline points="-8,-44 0,-10"/><polyline points="-8,-40 -32,-28"/><polyline points="-8,-40 10,-30"/><polyline points="0,-10 -26,2 -38,26"/><polyline points="0,-10 16,8 6,32"/></g>
+  <g transform="translate(985,302) scale(1.22)" stroke="#d93b4a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.92"><circle cx="6" cy="-70" r="12" fill="#d93b4a" stroke="none"/><polyline points="4,-56 2,-14"/><polyline points="4,-52 24,-72"/><line x1="24" y1="-72" x2="34" y2="-88" stroke-width="8"/><ellipse cx="38" cy="-94" rx="9" ry="12" transform="rotate(30 38 -94)" stroke-width="7"/><polyline points="4,-52 -18,-40"/><polyline points="2,-14 26,0 34,20"/><polyline points="2,-14 -16,2 -22,24"/></g>
+  <g transform="translate(1095,298) scale(1.0)" stroke="#8e44ad" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.85"><circle cx="14" cy="-58" r="12" fill="#f2b705" stroke="none"/><polyline points="6,-44 -2,-10"/><polyline points="6,-40 34,-46"/><polyline points="6,-40 -12,-26"/><polyline points="-2,-10 26,-2 36,22"/><polyline points="-2,-10 -16,10 -4,32"/></g>
+  <rect x="80" y="360" width="1040" height="6" rx="3" fill="url(#rainbow)" opacity="0.85"/>
 </svg>
-</div>
+    <div class="hero-text">
+      <h1>Сайт учителя физической культуры</h1>
+      <p>Бубенко В. С. &middot; МБОУ &laquo;Макушинская СОШ № 1&raquo; &middot; г. Макушино</p>
+      <div class="sub">Физическая культура &mdash; это движение, здоровье и хорошее настроение каждый день</div>
+    </div>
+  </div>
 
-<main>
-  <section class="intro">
-    <p>Разминка для уроков, подвижные игры, тесты и нормативы, план подготовки, внеурочные мероприятия и методические разработки — всё в одном месте. Раздел поможет школьникам узнать нормативы, найти игру для перемены и подготовиться к сдаче ГТО.</p>
-  </section>
-
-  <h2>Разделы сайта</h2>
-  <p class="sub">Выберите, куда отправимся: зарядиться, поиграть или проверить свои силы 🤸</p>
-
-  <div class="grid">
-    <a class="card" style="--c:#F08A3C" href="razminka.html">
-      <span class="emoji">🏃</span>
-      <h3>Разминка</h3>
-      <p>16 готовых комплексов по параллелям: 1–11 классы, с дозировкой и описанием техники.</p>
-      <span class="go">Открыть раздел →</span>
+  <div class="cards">
+    <a class="card" style="--c:#ef7d1a" href="razminka.html">
+      <div class="ico">&#129295;</div><h2>Разминка</h2>
+      <p>Комплексы упражнений для начала урока и утренней зарядки.</p>
     </a>
-    <a class="card" style="--c:#5FA85C" href="igry.html">
-      <span class="emoji">⚽</span>
-      <h3>Подвижные игры</h3>
-      <p>Сборник игр для 1–11 классов: место, инвентарь, правила безопасности.</p>
-      <span class="go">Открыть раздел →</span>
+    <a class="card" style="--c:#2b6fd4" href="normativy.html">
+      <div class="ico">&#127941;</div><h2>Тесты и нормативы</h2>
+      <p>ГТО по ступеням и школьные нормативы по классам.</p>
     </a>
-    <a class="card" style="--c:#3E7FB8" href="normativy.html">
-      <span class="emoji">🏅</span>
-      <h3>Тесты и нормативы</h3>
-      <p>ГТО по ступеням и школьные нормативы.</p>
-      <span class="go">Открыть раздел →</span>
+    <a class="card" style="--c:#2fae4e" href="igry.html">
+      <div class="ico">&#9917;</div><h2>Игры</h2>
+      <p>Подвижные игры для уроков, перемен и прогулок.</p>
     </a>
-    <a class="card" style="--c:#8E6FB8" href="podgotovka.html">
-      <span class="emoji">📈</span>
-      <h3>Подготовка к нормативам</h3>
-      <p>План на четыре недели, упражнения на скорость, силу и выносливость, режим дня.</p>
-      <span class="go">Открыть раздел →</span>
+    <a class="card" style="--c:#f2b705" href="podgotovka.html">
+      <div class="ico">&#128170;</div><h2>Подготовка</h2>
+      <p>Как подготовиться к сдаче нормативов без вреда для здоровья.</p>
     </a>
-    <a class="card" style="--c:#E8577E" href="meropriyatiya.html">
-      <span class="emoji">🎉</span>
-      <h3>Внеурочные мероприятия</h3>
-      <p>Весёлые старты, футбольные и спортивные праздники для всех классов.</p>
-      <span class="go">Открыть раздел →</span>
+    <a class="card" style="--c:#d93b4a" href="meropriyatiya.html">
+      <div class="ico">&#127942;</div><h2>Мероприятия</h2>
+      <p>Соревнования, весёлые старты и спортивные праздники школы.</p>
     </a>
-    <a class="card" style="--c:#39B8B0" href="metodichka.html">
-      <span class="emoji">📚</span>
-      <h3>Методические материалы</h3>
-      <p>Современные образовательные технологии, работа с обучающимися с ОВЗ, секция «Ритмика».</p>
-      <span class="go">Открыть раздел →</span>
+    <a class="card" style="--c:#8e44ad" href="metodichka.html">
+      <div class="ico">&#128218;</div><h2>Методические материалы</h2>
+      <p>Разработки и материалы для учителей и родителей.</p>
     </a>
-    <a class="card" style="--c:#8FB53A" href="zozh.html">
-      <span class="emoji">🥗</span>
-      <h3>Здоровый образ жизни</h3>
-      <p>Питание, сон, движение и вода — простые правила, которые помогают расти сильным.</p>
-      <span class="go">Открыть раздел →</span>
+    <a class="card" style="--c:#0fa3a3" href="zozh.html">
+      <div class="ico">&#127807;</div><h2>Здоровый образ жизни</h2>
+      <p>Сон, питание, движение и привычки, которые укрепляют здоровье.</p>
     </a>
   </div>
 
-  <section class="about">
-    <h3 style="margin-bottom:10px;color:#2E4A5F;">О сайте</h3>
-    <p>Сайт создан для школьников, родителей и коллег: здесь собраны материалы по физической культуре для 1–11 классов. Занимайтесь регулярно, берегите здоровье — и пусть каждый урок приносит радость движения! 🏃</p>
-  </section>
-</main>
+  <div class="about">
+    <h2>О сайте</h2>
+    <p>Автор &mdash; Бубенко Виктория Сергеевна, учитель физической культуры. Здесь собраны материалы для уроков,
+    подготовки к ГТО и школьным нормативам, подвижные игры и советы по здоровому образу жизни.
+    Материалы будут полезны ученикам, родителям и коллегам.</p>
+  </div>
 
-<footer>
-  <b>© Бубенко Виктория Сергеевна</b>, учитель физической культуры, 2026<br>
-  МБОУ «Макушинская СОШ № 1», г. Макушино
-</footer>
-
+  <footer>
+    &copy; Бубенко Виктория Сергеевна, учитель физической культуры<br>
+    МБОУ &laquo;Макушинская СОШ № 1&raquo;, г. Макушино
+  </footer>
+</div>
 </body>
 </html>
