@@ -3,37 +3,282 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Физкультура</title>
+<title>Сайт учителя физической культуры — Бубенко В. С.</title>
 <style>
-  body { font-family: Arial, sans-serif; margin: 0; background: #f4f7fb; color: #222; }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
-  header { padding: 28px 0 10px; }
-  h1 { color: #1a56b0; margin: 0 0 6px; }
-  .lead { color: #444; margin: 0 0 22px; font-size: 16px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; padding-bottom: 30px; }
-  .card { display: block; background: #fff; border: 1px solid #d0d7de; border-radius: 12px; padding: 18px 20px; text-decoration: none; color: #222; }
-  .card h2 { margin: 0 0 6px; color: #1a56b0; font-size: 20px; }
-  .card p { margin: 0; font-size: 15px; line-height: 1.45; color: #444; }
-  .card:hover { border-color: #1a56b0; }
-  footer { padding: 20px 0 30px; color: #777; font-size: 14px; text-align: center; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: linear-gradient(160deg, #eaf4ff 0%, #f6fbff 60%, #eef9f0 100%);
+    color: #24303c;
+    min-height: 100vh;
+  }
+  .topbar {
+    background: linear-gradient(90deg, #1a56b0, #1e88c9);
+    color: #fff;
+    padding: 14px 20px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .3px;
+  }
+  .hero {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    padding: 0 20px;
+  }
+  .hero-card {
+    background: linear-gradient(120deg, #1a56b0 0%, #1e88c9 55%, #26b6a4 100%);
+    border-radius: 22px;
+    color: #fff;
+    padding: 44px 44px 0;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(26,86,176,.25);
+    position: relative;
+  }
+  .hero-school {
+    display: inline-block;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.35);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+  .hero-card h1 {
+    font-size: clamp(26px, 4vw, 40px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .hero-card p {
+    max-width: 640px;
+    font-size: 17px;
+    line-height: 1.55;
+    opacity: .95;
+    margin-bottom: 10px;
+  }
+  .hero-author {
+    font-size: 15px;
+    opacity: .9;
+    margin-bottom: 6px;
+  }
+  .hero-art { display: block; width: 100%; height: auto; margin-top: 8px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  h2.section-title {
+    text-align: center;
+    font-size: clamp(22px, 3vw, 30px);
+    margin: 48px 0 8px;
+    color: #1a56b0;
+  }
+  .section-sub { text-align: center; color: #5b6b7a; margin-bottom: 30px; font-size: 16px; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+    margin-bottom: 48px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 26px 24px 22px;
+    text-decoration: none;
+    color: #24303c;
+    display: block;
+    box-shadow: 0 6px 18px rgba(30,60,90,.08);
+    border: 1px solid #e8eef5;
+    transition: transform .18s ease, box-shadow .18s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(30,60,90,.16); }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+  }
+  .c1::before { background: linear-gradient(90deg,#ff9a3d,#ffd166); }
+  .c2::before { background: linear-gradient(90deg,#26b6a4,#7ee0c8); }
+  .c3::before { background: linear-gradient(90deg,#e84393,#fd9bbd); }
+  .c4::before { background: linear-gradient(90deg,#1a56b0,#6db3f2); }
+  .c5::before { background: linear-gradient(90deg,#8e44ad,#c39bd3); }
+  .c6::before { background: linear-gradient(90deg,#2f80ed,#56ccf2); }
+  .c7::before { background: linear-gradient(90deg,#27ae60,#a3e4b7); }
+  .card-icon {
+    width: 58px; height: 58px;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  .c1 .card-icon { background: #fff3e0; }
+  .c2 .card-icon { background: #e2f8f3; }
+  .c3 .card-icon { background: #fdeaf3; }
+  .c4 .card-icon { background: #e7f0fd; }
+  .c5 .card-icon { background: #f4ecfa; }
+  .c6 .card-icon { background: #eaf5fe; }
+  .c7 .card-icon { background: #e9f9ee; }
+  .card h3 { font-size: 20px; margin-bottom: 8px; }
+  .card p { font-size: 15px; line-height: 1.5; color: #5b6b7a; }
+  .card .go {
+    display: inline-block;
+    margin-top: 14px;
+    font-weight: 600;
+    color: #1a56b0;
+    font-size: 14px;
+  }
+  .info-strip {
+    max-width: 1100px;
+    margin: 0 auto 48px;
+    padding: 0 20px;
+  }
+  .info-inner {
+    background: #ffffff;
+    border: 1px solid #e8eef5;
+    border-radius: 18px;
+    padding: 28px 30px;
+    box-shadow: 0 6px 18px rgba(30,60,90,.08);
+  }
+  .info-inner h3 { color: #1a56b0; margin-bottom: 10px; font-size: 20px; }
+  .info-inner p { color: #44546a; line-height: 1.6; margin-bottom: 8px; }
+  .footer {
+    background: #1f2d3d;
+    color: #cfdce8;
+    text-align: center;
+    padding: 26px 20px 30px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .footer .foot-name { color: #ffffff; font-weight: 600; font-size: 15px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>Физическая культура</h1>
-    <p class="lead">Сайт для школьников: разминки, игры, нормативы, подготовка и здоровый образ жизни.</p>
-  </header>
-  <div class="grid">
-    <a class="card" href="razminka.html"><h2>Разминка</h2><p>Упражнения для подготовки к уроку и тренировке.</p></a>
-    <a class="card" href="igry.html"><h2>Игры</h2><p>Подвижные игры для уроков и перемен.</p></a>
-    <a class="card" href="normativy.html"><h2>Тесты и нормативы</h2><p>ГТО по ступеням и школьные нормативы.</p></a>
-    <a class="card" href="podgotovka.html"><h2>Как подготовиться</h2><p>План подготовки к сдаче нормативов.</p></a>
-    <a class="card" href="meropriyatiya.html"><h2>Внеурочные мероприятия</h2><p>Соревнования, дни здоровья и праздники.</p></a>
-    <a class="card" href="metodiki.html"><h2>Методические материалы</h2><p>Материалы для учителей и самообучения.</p></a>
-    <a class="card" href="zozh.html"><h2>Здоровый образ жизни</h2><p>Сон, питание, движение и простые правила здоровья.</p></a>
+
+<div class="topbar">Физическая культура · Макушинская СОШ № 1</div>
+
+<header class="hero">
+  <div class="hero-card">
+    <div class="hero-school">МБОУ «Макушинская СОШ № 1» · г. Макушино</div>
+    <h1>Сайт учителя физической культуры<br>— Бубенко В. С.</h1>
+    <p class="hero-author"><b>Автор:</b> Бубенко Виктория Сергеевна, учитель физической культуры</p>
+    <p>Разминка для уроков, подвижные игры, тесты и нормативы, план подготовки, внеурочные мероприятия и методические разработки — всё в одном месте. Раздел поможет школьникам узнать нормативы, найти игру для перемены и подготовиться к сдаче ГТО.</p>
+
+    <svg class="hero-art" viewBox="0 0 1100 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иллюстрация: дети бегут по стадиону">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#4facfe"/>
+          <stop offset="1" stop-color="#8fd3f4"/>
+        </linearGradient>
+        <linearGradient id="track" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ff8a5c"/>
+          <stop offset="1" stop-color="#e2673f"/>
+        </linearGradient>
+      </defs>
+      <rect width="1100" height="220" fill="url(#sky)"/>
+      <circle cx="960" cy="70" r="38" fill="#ffd54f"/>
+      <circle cx="960" cy="70" r="52" fill="#ffd54f" opacity=".35"/>
+      <ellipse cx="180" cy="60" rx="55" ry="18" fill="#ffffff" opacity=".85"/>
+      <ellipse cx="235" cy="70" rx="40" ry="14" fill="#ffffff" opacity=".85"/>
+      <ellipse cx="640" cy="50" rx="48" ry="15" fill="#ffffff" opacity=".8"/>
+      <path d="M0 220 Q 180 150 380 205 Q 560 250 760 185 Q 930 135 1100 195 L1100 220 Z" fill="#69c77e"/>
+      <path d="M0 220 Q 300 170 620 212 Q 900 245 1100 205 L1100 220 Z" fill="#4faa63"/>
+      <rect y="220" width="1100" height="80" fill="url(#track)"/>
+      <line x1="0" y1="244" x2="1100" y2="244" stroke="#ffffff" stroke-width="4" stroke-dasharray="34 26" opacity=".8"/>
+      <line x1="0" y1="270" x2="1100" y2="270" stroke="#ffffff" stroke-width="4" stroke-dasharray="34 26" opacity=".6"/>
+      <!-- бегун 1 -->
+      <g fill="#1f2d3d">
+        <circle cx="330" cy="150" r="14"/>
+        <path d="M328 165 q -18 8 -24 30 l -20 18 q -10 4 -4 10 q 6 5 12 -2 l 22 -18 q 14 -4 18 -20 z"/>
+        <path d="M332 168 q 20 6 26 26 l 24 8 q 10 4 5 11 q -4 6 -12 2 l -24 -10 q -16 -2 -26 -18 z"/>
+        <rect x="322" y="164" width="16" height="34" rx="8"/>
+      </g>
+      <!-- бегун 2 -->
+      <g fill="#c0392b">
+        <circle cx="500" cy="142" r="13"/>
+        <path d="M498 156 q -17 9 -22 29 l -19 17 q -9 4 -3 10 q 6 5 12 -2 l 20 -17 q 13 -3 17 -19 z"/>
+        <path d="M503 159 q 19 6 25 25 l 23 7 q 10 4 5 11 q -4 6 -12 2 l -23 -9 q -15 -2 -24 -17 z"/>
+        <rect x="492" y="155" width="15" height="33" rx="7"/>
+      </g>
+      <!-- бегун 3 -->
+      <g fill="#1a56b0">
+        <circle cx="670" cy="150" r="13"/>
+        <path d="M668 164 q -17 8 -22 28 l -19 16 q -9 4 -3 10 q 6 5 12 -2 l 20 -16 q 13 -3 17 -18 z"/>
+        <path d="M673 167 q 19 6 24 24 l 22 7 q 10 4 5 10 q -4 6 -12 2 l -22 -9 q -15 -2 -23 -16 z"/>
+        <rect x="662" y="163" width="15" height="33" rx="7"/>
+      </g>
+      <!-- мячик -->
+      <circle cx="840" cy="205" r="16" fill="#ffffff"/>
+      <path d="M828 199 q 12 -6 24 0 M826 210 q 14 8 28 0" stroke="#2f80ed" stroke-width="3" fill="none"/>
+    </svg>
   </div>
-  <footer>Сайт по физической культуре</footer>
-</div>
+</header>
+
+<main class="container">
+  <h2 class="section-title">Разделы сайта</h2>
+  <p class="section-sub">Выберите, куда отправимся: зарядиться, поиграть или проверить свои силы</p>
+
+  <div class="cards">
+    <a class="card c1" href="razminka.html">
+      <div class="card-icon">🤸</div>
+      <h3>Разминка</h3>
+      <p>16 готовых комплексов по параллелям: 1–11 классы, с дозировкой и описанием техники.</p>
+      <span class="go">Открыть раздел →</span>
+    </a>
+
+    <a class="card c2" href="igry.html">
+      <div class="card-icon">⚽</div>
+      <h3>Подвижные игры</h3>
+      <p>Сборник игр для 1–11 классов: место, инвентарь, правила безопасности.</p>
+      <span class="go">Открыть раздел →</span>
+    </a>
+
+    <a class="card c3" href="normativy.html">
+      <div class="card-icon">🏅</div>
+      <h3>Тесты и нормативы</h3>
+      <p>ГТО по ступеням и школьные нормативы.</p>
+      <span class="go">Открыть раздел →</span>
+    </a>
+
+    <a class="card c4" href="podgotovka.html">
+      <div class="card-icon">📈</div>
+      <h3>Подготовка к нормативам</h3>
+      <p>План на четыре недели, упражнения на скорость, силу и выносливость, режим дня.</p>
+      <span class="go">Открыть раздел →</span>
+    </a>
+
+    <a class="card c5" href="meropriyatiya.html">
+      <div class="card-icon">🎉</div>
+      <h3>Внеурочные мероприятия</h3>
+      <p>Весёлые старты, футбольные и спортивные праздники для всех классов.</p>
+      <span class="go">Открыть раздел →</span>
+    </a>
+
+    <a class="card c6" href="metodiki.html">
+      <div class="card-icon">📚</div>
+      <h3>Методические материалы</h3>
+      <p>Современные образовательные технологии, работа с обучающимися с ОВЗ, секция «Ритмика».</p>
+      <span class="go">Открыть раздел →</span>
+    </a>
+
+    <a class="card c7" href="zozh.html">
+      <div class="card-icon">🥗</div>
+      <h3>Здоровый образ жизни</h3>
+      <p>Питание, сон, движение и вода — простые правила, которые помогают расти сильным.</p>
+      <span class="go">Открыть раздел →</span>
+    </a>
+  </div>
+
+  <section class="info-strip">
+    <div class="info-inner">
+      <h3>О сайте</h3>
+      <p>Сайт создан для школьников, родителей и коллег: здесь собраны материалы по физической культуре для 1–11 классов.</p>
+      <p>Занимайтесь регулярно, берегите здоровье — и пусть каждый урок приносит радость движения! 🏃</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="foot-name">© Бубенко Виктория Сергеевна, учитель физической культуры, 2026</div>
+  <div>МБОУ «Макушинская СОШ № 1», г. Макушино</div>
+</footer>
+
 </body>
 </html>
