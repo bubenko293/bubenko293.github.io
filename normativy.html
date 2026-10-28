@@ -3,167 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ГТО и нормативы</title>
+<title>Нормативы ГТО и школьные нормативы</title>
 <style>
-  :root{--green:#2e7d32;--green-l:#e8f5e9;--orange:#e65100;--blue:#1565c0;}
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Arial,Helvetica,sans-serif;background:#f4f8f4;color:#1b2b1b;line-height:1.5;}
-  .wrap{max-width:1000px;margin:0 auto;padding:16px;}
-  header{background:var(--green);color:#fff;padding:24px 16px;text-align:center;border-radius:0 0 16px 16px;}
-  header h1{font-size:26px;margin-bottom:6px;}
-  header p{opacity:.9;font-size:14px;}
-  .back{display:inline-block;margin:12px 0;background:var(--green);color:#fff;text-decoration:none;padding:8px 16px;border-radius:8px;font-size:14px;}
-  section{background:#fff;border-radius:12px;padding:18px;margin:16px 0;box-shadow:0 1px 4px rgba(0,0,0,.08);}
-  h2{color:var(--green);font-size:20px;margin-bottom:10px;}
-  h3{font-size:16px;margin:14px 0 8px;color:#244;}
-  .note{background:var(--green-l);border-left:4px solid var(--green);padding:10px 12px;border-radius:6px;font-size:14px;margin-bottom:12px;}
-  .warn{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 12px;border-radius:6px;font-size:14px;margin:12px 0;}
-  .tblwrap{overflow-x:auto;margin:10px 0;}
-  table{border-collapse:collapse;width:100%;font-size:14px;}
-  th,td{border:1px solid #cde3cf;padding:7px 9px;text-align:left;vertical-align:top;}
-  th{background:var(--green-l);color:#14421a;}
-  tr.obl td:first-child{border-left:4px solid var(--orange);}
-  tr.sel td:first-child{border-left:4px solid var(--blue);}
-  .tag{display:inline-block;font-size:11px;padding:2px 7px;border-radius:10px;color:#fff;white-space:nowrap;}
-  .tag.o{background:var(--orange);}
-  .tag.s{background:var(--blue);}
-  .gold{font-weight:bold;}
-  ul{margin:8px 0 8px 20px;}
-  li{margin-bottom:4px;}
-  footer{text-align:center;color:#6b7d6b;font-size:12px;padding:16px 0 28px;}
+body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:#f4f9f4;color:#1d3524}
+header{background:#2e7d32;color:#fff;padding:24px 16px;text-align:center}
+header h1{margin:0;font-size:26px}
+main{max-width:1000px;margin:0 auto;padding:16px}
+h2{color:#2e7d32;margin-top:34px;font-size:22px;border-bottom:3px solid #a5d6a7;padding-bottom:6px}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14px;margin-top:10px}
+th{background:#2e7d32;color:#fff;padding:8px 6px;border:1px solid #1b5e20}
+tr.sub th{background:#4caf50;font-size:13px}
+td{border:1px solid #c8e6c9;padding:7px 6px;vertical-align:top}
+tr.req td:first-child{border-left:6px solid #f57c00}
+tr.opt td:first-child{border-left:6px solid #1976d2}
+.n{width:34px;text-align:center;font-weight:bold;color:#2e7d32}
+.ex{min-width:220px}
+.q{color:#5d7a63;font-size:12px;margin-top:4px}
+.v{text-align:center;white-space:nowrap}
+td.wide, .q.wide{white-space:normal;font-size:13px}
+.tag{font-size:11px;padding:2px 7px;border-radius:10px;color:#fff;margin-top:4px;display:inline-block}
+.tag.r{background:#f57c00} .tag.b{background:#1976d2}
+.need{background:#e8f5e9;border-left:5px solid #2e7d32;padding:10px 12px;margin:10px 0 4px;font-size:14px;border-radius:0 8px 8px 0}
+.note{background:#fff8e1;border-left:5px solid #f9a825;padding:10px 12px;margin:10px 0;font-size:14px}
+.btn{display:inline-block;background:#2e7d32;color:#fff;text-decoration:none;padding:10px 22px;border-radius:24px;margin:20px 0}
 </style>
 </head>
 <body>
-<header><h1>🥇 ГТО и нормативы</h1><p>Ступени ГТО и школьные требования — по цифрам и качеству</p></header>
-<div class="wrap">
-<a class="back" href="index.html">← На главную</a>
+<header><h1>Физическая культура — Нормативы</h1></header>
+<main>
+<div class="note">Таблицы составлены по государственным требованиям ГТО (приказ Минспорта России № 117 от 22.02.2023). Цифры лыжного и плавательного нормативов, а также нормативы школы сверяйте с рабочей программой вашего образовательного учреждения.</div>
 
-<div class="note"><b>Как читать таблицы:</b> в таблицах ГТО цифры идут в порядке <b>бронза / серебро / золото</b>. Оранжевая метка «обязательно» — испытание сдавать нужно всем; синяя «по выбору» — можно выбрать из списка. Для получения знака надо сдать <b>все обязательные</b> плюс нужное число испытаний по выбору, причём всё — на уровне <b>одного и того же</b> знака.</div>
-<div class="warn">⚠ Цифры приведены по положению о ГТО (приказ Минспорта России от 22.02.2023 № 117). Перед сдачей сверяйте с актуальными таблицами на gto.ru и с рабочей программой школы: бег на выносливость в некоторых программах заменяется бегом 2000/3000 м по стадиону, плавание и лыжи проводятся по условиям школы.</div>
+<h2>Как получить знак ГТО</h2>
+<div class="need">Оранжевая метка «обязательно» — испытание нужно сдать всем. Синяя «по выбору» — сдаётся, чтобы добрать нужное количество испытаний. Для знака сдаются <b>все обязательные испытания</b> плюс нужное число испытаний по выбору, и все они должны быть выполнены на уровень <b>одного и того же</b> знака: если обязательное сдано на серебро, а выбранное на золото — будет серебро.</div>
 
-<section><h2>Правила сдачи и безопасность</h2>
-<ul>
-<li>Испытания сдаются в течение учебного года; каждая попытка фиксируется в протоколе.</li>
-<li>Перед сдачей — разминка 5–10 минут (на сайте есть раздел «Разминка»).</li>
-<li>Беговые испытания не сдаются при недомогании и температуре.</li>
-<li>Наклон вперёд выполняется медленно, без рывков; при боли в спине — сообщить учителю.</li>
-</ul>
-</section>
-<section><h2>Ступень I — 6–7 лет</h2><div class="note">Для знака отличия: 6 испытаний, из них 4 обязательных.</div><h3>Мальчики / юноши</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 30 м (сек)<br><span class="tag o">обязательно</span></td><td>6,9</td><td>6,7</td><td class="gold">5,9</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>10,3</td><td>9,8</td><td class="gold">9,1</td></tr>
-<tr class="obl"><td>Смешанное передвижение 1000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>5:50</td><td>5:20</td><td class="gold">4:20</td></tr>
-<tr class="obl"><td>Подтягивание из виса на высокой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>2</td><td>3</td><td class="gold">5</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+2</td><td>+4</td><td class="gold">+7</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>115</td><td>125</td><td class="gold">145</td></tr>
-<tr class="sel"><td>Сгибание и разгибание рук в упоре лёжа (раз)<br><span class="tag s">по выбору</span></td><td>7</td><td>9</td><td class="gold">12</td></tr>
-<tr class="sel"><td>Метание теннисного мяча в цель (попаданий из 5)<br><span class="tag s">по выбору</span></td><td>1</td><td>2</td><td class="gold">3</td></tr>
-<tr class="sel"><td>Плавание 25 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>3:00</td><td>2:40</td><td class="gold">2:10</td></tr>
-</table></div><h3>Девочки / девушки</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 30 м (сек)<br><span class="tag o">обязательно</span></td><td>7,1</td><td>6,8</td><td class="gold">6,2</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>10,9</td><td>10,3</td><td class="gold">9,4</td></tr>
-<tr class="obl"><td>Смешанное передвижение 1000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>6:00</td><td>5:30</td><td class="gold">4:40</td></tr>
-<tr class="obl"><td>Подтягивание из виса лёжа на низкой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>4</td><td>6</td><td class="gold">9</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+4</td><td>+7</td><td class="gold">+11</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>110</td><td>120</td><td class="gold">135</td></tr>
-<tr class="sel"><td>Сгибание и разгибание рук в упоре лёжа (раз)<br><span class="tag s">по выбору</span></td><td>6</td><td>8</td><td class="gold">11</td></tr>
-<tr class="sel"><td>Метание теннисного мяча в цель (попаданий из 5)<br><span class="tag s">по выбору</span></td><td>1</td><td>2</td><td class="gold">3</td></tr>
-<tr class="sel"><td>Плавание 25 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>3:10</td><td>2:50</td><td class="gold">2:20</td></tr>
-</table></div></section><section><h2>Ступень II — 8–9 лет</h2><div class="note">Для знака отличия: 7 испытаний, из них 4 обязательных.</div><h3>Мальчики / юноши</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 30 м (сек)<br><span class="tag o">обязательно</span></td><td>6,5</td><td>6,3</td><td class="gold">5,7</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>9,9</td><td>9,4</td><td class="gold">8,9</td></tr>
-<tr class="obl"><td>Смешанное передвижение 1000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>5:00</td><td>4:40</td><td class="gold">4:00</td></tr>
-<tr class="obl"><td>Подтягивание из виса на высокой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>2</td><td>4</td><td class="gold">5</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+3</td><td>+6</td><td class="gold">+9</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>140</td><td>150</td><td class="gold">170</td></tr>
-<tr class="sel"><td>Сгибание и разгибание рук в упоре лёжа (раз)<br><span class="tag s">по выбору</span></td><td>9</td><td>12</td><td class="gold">15</td></tr>
-<tr class="sel"><td>Метание мяча 150 г (м)<br><span class="tag s">по выбору</span></td><td>20</td><td>23</td><td class="gold">29</td></tr>
-<tr class="sel"><td>Плавание 25 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>2:50</td><td>2:30</td><td class="gold">2:00</td></tr>
-</table></div><h3>Девочки / девушки</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 30 м (сек)<br><span class="tag o">обязательно</span></td><td>6,8</td><td>6,5</td><td class="gold">6,0</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>10,4</td><td>9,8</td><td class="gold">9,2</td></tr>
-<tr class="obl"><td>Смешанное передвижение 1000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>5:30</td><td>5:00</td><td class="gold">4:20</td></tr>
-<tr class="obl"><td>Подтягивание из виса лёжа на низкой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>6</td><td>10</td><td class="gold">14</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+5</td><td>+8</td><td class="gold">+13</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>130</td><td>140</td><td class="gold">160</td></tr>
-<tr class="sel"><td>Метание мяча 150 г (м)<br><span class="tag s">по выбору</span></td><td>14</td><td>16</td><td class="gold">20</td></tr>
-<tr class="sel"><td>Плавание 25 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>3:00</td><td>2:40</td><td class="gold">2:10</td></tr>
-</table></div></section><section><h2>Ступень III — 10–11 лет</h2><div class="note">Для знака отличия: 8 испытаний, из них 4 обязательных.</div><h3>Мальчики / юноши</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 60 м (сек)<br><span class="tag o">обязательно</span></td><td>10,5</td><td>9,9</td><td class="gold">8,9</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>9,5</td><td>9,0</td><td class="gold">8,4</td></tr>
-<tr class="obl"><td>Бег 1500 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>9:30</td><td>8:30</td><td class="gold">7:30</td></tr>
-<tr class="obl"><td>Подтягивание из виса на высокой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>3</td><td>5</td><td class="gold">7</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+4</td><td>+6</td><td class="gold">+9</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>150</td><td>160</td><td class="gold">180</td></tr>
-<tr class="sel"><td>Метание мяча 150 г (м)<br><span class="tag s">по выбору</span></td><td>20</td><td>23</td><td class="gold">30</td></tr>
-<tr class="sel"><td>Плавание 50 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>1:30</td><td>1:15</td><td class="gold">1:00</td></tr>
-<tr class="sel"><td>Сгибание и разгибание рук в упоре лёжа (раз)<br><span class="tag s">по выбору</span></td><td>12</td><td>15</td><td class="gold">20</td></tr>
-</table></div><h3>Девочки / девушки</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 60 м (сек)<br><span class="tag o">обязательно</span></td><td>11,2</td><td>10,5</td><td class="gold">9,9</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>10,0</td><td>9,5</td><td class="gold">8,8</td></tr>
-<tr class="obl"><td>Бег 2000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>10:00</td><td>9:30</td><td class="gold">8:00</td></tr>
-<tr class="obl"><td>Подтягивание из виса лёжа на низкой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>8</td><td>12</td><td class="gold">16</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+6</td><td>+8</td><td class="gold">+13</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>135</td><td>145</td><td class="gold">165</td></tr>
-<tr class="sel"><td>Метание мяча 150 г (м)<br><span class="tag s">по выбору</span></td><td>14</td><td>17</td><td class="gold">24</td></tr>
-<tr class="sel"><td>Плавание 50 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>1:40</td><td>1:20</td><td class="gold">1:05</td></tr>
-</table></div></section><section><h2>Ступень IV — 12–13 лет</h2><div class="note">Для знака отличия: 8 испытаний, из них 4 обязательных.</div><h3>Мальчики / юноши</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 60 м (сек)<br><span class="tag o">обязательно</span></td><td>10,0</td><td>9,4</td><td class="gold">8,5</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>9,2</td><td>8,8</td><td class="gold">8,2</td></tr>
-<tr class="obl"><td>Бег 1500 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>8:40</td><td>8:00</td><td class="gold">6:50</td></tr>
-<tr class="obl"><td>Подтягивание из виса на высокой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>4</td><td>6</td><td class="gold">9</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+7</td><td>+9</td><td class="gold">+13</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>160</td><td>170</td><td class="gold">190</td></tr>
-<tr class="sel"><td>Метание мяча 150 г (м)<br><span class="tag s">по выбору</span></td><td>25</td><td>29</td><td class="gold">37</td></tr>
-<tr class="sel"><td>Плавание 50 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>1:15</td><td>1:00</td><td class="gold">0:45</td></tr>
-<tr class="sel"><td>Бег на лыжах 3 км (мин:сек)<br><span class="tag s">по выбору</span></td><td>19:30</td><td>18:00</td><td class="gold">16:00</td></tr>
-</table></div><h3>Девочки / девушки</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 60 м (сек)<br><span class="tag o">обязательно</span></td><td>10,6</td><td>10,0</td><td class="gold">9,4</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>9,9</td><td>9,4</td><td class="gold">8,8</td></tr>
-<tr class="obl"><td>Бег 2000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>9:30</td><td>9:00</td><td class="gold">7:50</td></tr>
-<tr class="obl"><td>Подтягивание из виса лёжа на низкой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>12</td><td>16</td><td class="gold">20</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+8</td><td>+10</td><td class="gold">+14</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>145</td><td>155</td><td class="gold">175</td></tr>
-<tr class="sel"><td>Метание мяча 150 г (м)<br><span class="tag s">по выбору</span></td><td>17</td><td>20</td><td class="gold">27</td></tr>
-<tr class="sel"><td>Плавание 50 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>1:30</td><td>1:10</td><td class="gold">0:55</td></tr>
-<tr class="sel"><td>Бег на лыжах 3 км (мин:сек)<br><span class="tag s">по выбору</span></td><td>21:00</td><td>19:30</td><td class="gold">17:30</td></tr>
-</table></div></section><section><h2>Ступень V — 14–15 лет</h2><div class="note">Для знака отличия: 9 испытаний, из них 4 обязательных.</div><h3>Мальчики / юноши</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 60 м (сек)<br><span class="tag o">обязательно</span></td><td>9,6</td><td>9,0</td><td class="gold">8,1</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>8,9</td><td>8,5</td><td class="gold">7,9</td></tr>
-<tr class="obl"><td>Бег 3000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>16:30</td><td>15:30</td><td class="gold">13:00</td></tr>
-<tr class="obl"><td>Подтягивание из виса на высокой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>7</td><td>9</td><td class="gold">12</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+8</td><td>+10</td><td class="gold">+14</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>170</td><td>180</td><td class="gold">200</td></tr>
-<tr class="sel"><td>Метание мяча 150 г (м)<br><span class="tag s">по выбору</span></td><td>29</td><td>32</td><td class="gold">41</td></tr>
-<tr class="sel"><td>Плавание 50 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>1:10</td><td>0:55</td><td class="gold">0:45</td></tr>
-<tr class="sel"><td>Бег на лыжах 5 км (мин:сек)<br><span class="tag s">по выбору</span></td><td>29:00</td><td>27:00</td><td class="gold">24:00</td></tr>
-</table></div><h3>Девочки / девушки</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 60 м (сек)<br><span class="tag o">обязательно</span></td><td>10,4</td><td>9,9</td><td class="gold">9,0</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>9,7</td><td>9,3</td><td class="gold">8,6</td></tr>
-<tr class="obl"><td>Бег 2000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>10:00</td><td>9:30</td><td class="gold">8:20</td></tr>
-<tr class="obl"><td>Подтягивание из виса лёжа на низкой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>14</td><td>18</td><td class="gold">22</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+9</td><td>+11</td><td class="gold">+16</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>150</td><td>160</td><td class="gold">185</td></tr>
-<tr class="sel"><td>Метание мяча 150 г (м)<br><span class="tag s">по выбору</span></td><td>18</td><td>22</td><td class="gold">30</td></tr>
-<tr class="sel"><td>Плавание 50 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>1:25</td><td>1:05</td><td class="gold">0:55</td></tr>
-<tr class="sel"><td>Бег на лыжах 3 км (мин:сек)<br><span class="tag s">по выбору</span></td><td>19:00</td><td>17:30</td><td class="gold">15:30</td></tr>
-</table></div></section><section><h2>Ступень VI — 16–17 лет</h2><div class="note">Для знака отличия: 9 испытаний, из них 4 обязательных.</div><h3>Мальчики / юноши</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 100 м (сек)<br><span class="tag o">обязательно</span></td><td>15,3</td><td>14,5</td><td class="gold">13,2</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>8,7</td><td>8,3</td><td class="gold">7,7</td></tr>
-<tr class="obl"><td>Бег 3000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>15:30</td><td>14:00</td><td class="gold">12:00</td></tr>
-<tr class="obl"><td>Подтягивание из виса на высокой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>9</td><td>11</td><td class="gold">14</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+8</td><td>+10</td><td class="gold">+15</td></tr>
-<tr class="sel"><td>Рывок гири 16 кг (сумма двух рук, раз)<br><span class="tag s">по выбору</span></td><td>20</td><td>25</td><td class="gold">35</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>175</td><td>185</td><td class="gold">210</td></tr>
-<tr class="sel"><td>Плавание 50 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>1:05</td><td>0:50</td><td class="gold">0:40</td></tr>
-<tr class="sel"><td>Сгибание и разгибание рук в упоре лёжа (раз)<br><span class="tag s">по выбору</span></td><td>25</td><td>30</td><td class="gold">40</td></tr>
-</table></div><h3>Девочки / девушки</h3><div class="tblwrap"><table><tr><th>Испытание</th><th>🥉 Бронза</th><th>🥈 Серебро</th><th class="gold">🥇 Золото</th></tr>
-<tr class="obl"><td>Бег 100 м (сек)<br><span class="tag o">обязательно</span></td><td>18,4</td><td>17,2</td><td class="gold">15,9</td></tr>
-<tr class="obl"><td>Челночный бег 3×10 м (сек)<br><span class="tag o">обязательно</span></td><td>9,7</td><td>9,3</td><td class="gold">8,5</td></tr>
-<tr class="obl"><td>Бег 2000 м (мин:сек)<br><span class="tag o">обязательно</span></td><td>10:30</td><td>10:00</td><td class="gold">8:30</td></tr>
-<tr class="obl"><td>Подтягивание из виса лёжа на низкой перекладине (раз)<br><span class="tag o">обязательно</span></td><td>15</td><td>19</td><td class="gold">24</td></tr>
-<tr class="obl"><td>Наклон вперёд с прямыми ногами (см ниже уровня)<br><span class="tag o">обязательно</span></td><td>+10</td><td>+13</td><td class="gold">+18</td></tr>
-<tr class="sel"><td>Прыжок в длину с места (см)<br><span class="tag s">по выбору</span></td><td>155</td><td>165</td><td class="gold">190</td></tr>
-<tr class="sel"><td>Плавание 50 м (мин:сек)<br><span class="tag s">по выбору</span></td><td>1:20</td><td>1:00</td><td class="gold">0:50</td></tr>
-<tr class="sel"><td>Сгибание и разгибание рук в упоре лёжа (раз)<br><span class="tag s">по выбору</span></td><td>18</td><td>22</td><td class="gold">30</td></tr>
-</table></div></section><section><h2>Школьные нормативы — по цифрам и качеству</h2><div class="note">Оценки «5/4/3» не ставятся: указано, <b>что именно нужно выполнить</b> (метры, секунды, разы) и <b>как должно выглядеть движение</b>. Точные цифры сверяйте с рабочей программой школы.</div><h3>1–2 классы</h3><div class="tblwrap"><table><tr><th>Упражнение</th><th>Нужно выполнить</th><th>Качество выполнения</th></tr><tr><td>Бег 30 м</td><td>М: не медленнее 7,0 с; Ж: 7,2 с</td><td>лёгкий бег на носках, туловище слегка наклонено вперёд</td></tr><tr><td>Челночный бег 3×10 м</td><td>М: 10,5 с; Ж: 11,0 с</td><td>касание линии рукой, движение без падений и резких торможений</td></tr><tr><td>Бег 1000 м</td><td>пройти без остановки (без учёта времени)</td><td>равномерный темп, дыхание свободное, без перехода на шаг</td></tr><tr><td>Прыжок в длину с места</td><td>М: не менее 120 см; Ж: 110 см</td><td>отталкивание двумя ногами, мягкое приземление на обе ноги</td></tr><tr><td>Подтягивание / отжимания</td><td>М: подтягивание — 2 раза; Ж: отжимания — 6 раз</td><td>подбородок выше перекладины; корпус прямой при отжиманиях</td></tr><tr><td>Наклон вперёд</td><td>достать пальцами пол, не сгибая колен</td><td>колени прямые, наклон медленный, без рывков</td></tr><tr><td>Метание мяча 150 г</td><td>М: не менее 12 м; Ж: 9 м</td><td>замах и бросок с шагом, мяч летит по дуге</td></tr></table></div><h3>3–4 классы</h3><div class="tblwrap"><table><tr><th>Упражнение</th><th>Нужно выполнить</th><th>Качество выполнения</th></tr><tr><td>Бег 60 м</td><td>М: не медленнее 11,0 с; Ж: 11,5 с</td><td>высокий старт, активная работа рук</td></tr><tr><td>Челночный бег 3×10 м</td><td>М: 10,0 с; Ж: 10,5 с</td><td>касание линии рукой, поворот без остановки</td></tr><tr><td>Бег 1000 м</td><td>пройти без остановки</td><td>равномерный темп, дыхание через нос</td></tr><tr><td>Прыжок в длину с места</td><td>М: не менее 140 см; Ж: 130 см</td><td>мощное отталкивание двумя ногами, баланс при приземлении</td></tr><tr><td>Подтягивание / отжимания</td><td>М: подтягивание — 3 раза; Ж: отжимания — 10 раз</td><td>подбородок выше перекладины; руки полностью выпрямляются</td></tr><tr><td>Наклон вперёд</td><td>коснуться пола пальцами рук</td><td>колени прямые, спина не сгибается рывками</td></tr><tr><td>Метание мяча 150 г</td><td>М: не менее 17 м; Ж: 12 м</td><td>правильная стойка, бросок по дуге с шагом</td></tr></table></div><h3>5–6 классы</h3><div class="tblwrap"><table><tr><th>Упражнение</th><th>Нужно выполнить</th><th>Качество выполнения</th></tr><tr><td>Бег 60 м</td><td>М: не медленнее 10,3 с; Ж: 10,7 с</td><td>низкий старт, движение без сбивания шага</td></tr><tr><td>Бег 1500 м (м) / 1000 м (ж)</td><td>пройти без остановки</td><td>равномерный темп, контроль дыхания</td></tr><tr><td>Прыжок в длину с места</td><td>М: не менее 160 см; Ж: 150 см</td><td>полное отталкивание, приземление на согнутые ноги</td></tr><tr><td>Подтягивание / отжимания</td><td>М: подтягивание — 5 раз; Ж: отжимания — 12 раз</td><td>без рывков, полный размах движения</td></tr><tr><td>Наклон вперёд</td><td>коснуться пола пальцами рук</td><td>колени прямые</td></tr><tr><td>Метание мяча 150 г</td><td>М: не менее 22 м; Ж: 15 м</td><td>разбег 2–3 шага, бросок с захлёстом кисти</td></tr><tr><td>Челночный бег 3×10 м</td><td>М: 9,5 с; Ж: 10,0 с</td><td>касание линии рукой, без падений</td></tr></table></div><h3>7–8 классы</h3><div class="tblwrap"><table><tr><th>Упражнение</th><th>Нужно выполнить</th><th>Качество выполнения</th></tr><tr><td>Бег 60 м</td><td>М: не медленнее 9,6 с; Ж: 10,2 с</td><td>низкий старт, спринтерская работа рук</td></tr><tr><td>Бег 2000 м (м) / 1500 м (ж)</td><td>пройти без остановки</td><td>равномерный темп, дыхание согласовано с шагами</td></tr><tr><td>Прыжок в длину с места</td><td>М: не менее 175 см; Ж: 160 см</td><td>отталкивание обеими ногами, работа рук в прыжке</td></tr><tr><td>Подтягивание / отжимания</td><td>М: подтягивание — 8 раз; Ж: отжимания — 14 раз</td><td>без раскачивания, подбородок выше перекладины</td></tr><tr><td>Наклон вперёд</td><td>коснуться пола ладонями</td><td>колени прямые, наклон без рывков</td></tr><tr><td>Метание мяча 150 г</td><td>М: не менее 28 м; Ж: 18 м</td><td>разбег и бросок единой связкой движений</td></tr><tr><td>Челночный бег 3×10 м</td><td>М: 9,0 с; Ж: 9,6 с</td><td>стабильные повороты без потери скорости</td></tr></table></div><h3>9–11 классы</h3><div class="tblwrap"><table><tr><th>Упражнение</th><th>Нужно выполнить</th><th>Качество выполнения</th></tr><tr><td>Бег 100 м</td><td>М: не медленнее 14,8 с; Ж: 17,5 с</td><td>низкий старт, наращивание скорости по дистанции</td></tr><tr><td>Бег 3000 м (м) / 2000 м (ж)</td><td>пройти без остановки</td><td>равномерный темп, дыхание не срывается до финиша</td></tr><tr><td>Прыжок в длину с места</td><td>М: не менее 190 см; Ж: 170 см</td><td>полное отталкивание, мягкое приземление</td></tr><tr><td>Подтягивание / отжимания</td><td>М: подтягивание — 11 раз; Ж: отжимания — 15 раз</td><td>без рывков и раскачивания, полный размах</td></tr><tr><td>Наклон вперёд</td><td>коснуться пола ладонями</td><td>колени прямые</td></tr><tr><td>Метание мяча 150 г</td><td>М: не менее 32 м; Ж: 20 м</td><td>разбег 3–5 шагов, бросок по параболе</td></tr></table></div></section><footer>Физическая культура • Раздел «ГТО и нормативы»</footer></div></body></html>
+
+<h2>Ступень I — 6–7 лет (1 класс)</h2>
+<table>
+<tr><th>№</th><th>Испытание</th>
+    <th colspan="3">Юноши</th><th colspan="3">Девушки</th></tr>
+<tr class="sub"><th></th><th></th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th></tr>
+<tr class="req"><td class="n">1</td><td class="ex">Бег 30 м, с <span class="tag r">обязательно</span><div class="q">скоростные возможности</div></td><td class="v">6,9</td><td class="v">6,4</td><td class="v">5,9</td><td class="v">7,0</td><td class="v">6,5</td><td class="v">6,0</td></tr><tr class="req"><td class="n">2</td><td class="ex">Смешанное передвижение 1 км (бег + ходьба), мин с <span class="tag r">обязательно</span><div class="q">выносливость</div></td><td class="v">8,50</td><td class="v">7,10</td><td class="v">6,30</td><td class="v">9,00</td><td class="v">7,35</td><td class="v">6,50</td></tr><tr class="req"><td class="n">3</td><td class="ex">Сгибание и разгибание рук в упоре лёжа на полу (юн) / с опорой о скамью (дев), раз <span class="tag r">обязательно</span><div class="q">сила</div></td><td class="v">7</td><td class="v">12</td><td class="v">17</td><td class="v">8</td><td class="v">11</td><td class="v">15</td></tr><tr class="req"><td class="n">4</td><td class="ex">Наклон вперёд с прямыми ногами <span class="tag r">обязательно</span><div class="q">гибкость</div></td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td></tr><tr class="opt"><td class="n">5</td><td class="ex">Подтягивание из виса на высокой перекладине (юн) / из виса лёжа (дев), раз <span class="tag b">по выбору</span><div class="q">сила</div></td><td class="v">2</td><td class="v">4</td><td class="v">7</td><td class="v">6</td><td class="v">10</td><td class="v">14</td></tr><tr class="opt"><td class="n">6</td><td class="ex">Прыжок в длину с места, см <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">115</td><td class="v">130</td><td class="v">150</td><td class="v">110</td><td class="v">125</td><td class="v">140</td></tr><tr class="opt"><td class="n">7</td><td class="ex">Челночный бег 3×10 м, с <span class="tag b">по выбору</span><div class="q">координационные качества</div></td><td class="v">10,9</td><td class="v">10,2</td><td class="v">9,7</td><td class="v">11,5</td><td class="v">10,7</td><td class="v">10,0</td></tr><tr class="opt"><td class="n">8</td><td class="ex">Метание мяча 150 г, м <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">19</td><td class="v">24</td><td class="v">29</td><td class="v">14</td><td class="v">18</td><td class="v">22</td></tr><tr class="opt"><td class="n">9</td><td class="ex">Бег на лыжах 1 км, мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">9,45</td><td class="v">8,45</td><td class="v">7,30</td><td class="v">10,00</td><td class="v">9,00</td><td class="v">8,00</td></tr><tr class="opt"><td class="n">10</td><td class="ex">Плавание 50 м <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">без учёта времени</td><td class="v">без учёта времени</td><td class="v">28,50 с</td><td class="v">без учёта времени</td><td class="v">без учёта времени</td><td class="v">31,50 с</td></tr>
+</table>
+<div class="need"><b>Для получения знака:</b> 🥉 бронза и 🥈 серебро — выполнить все обязательные + 1 по выбору; 🥇 золото — все обязательные + 1 по выбору. Все сданные испытания должны быть на уровне одного и того же знака.</div>
+
+<h2>Ступень II — 8–9 лет (2–3 классы)</h2>
+<table>
+<tr><th>№</th><th>Испытание</th>
+    <th colspan="3">Юноши</th><th colspan="3">Девушки</th></tr>
+<tr class="sub"><th></th><th></th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th></tr>
+<tr class="req"><td class="n">1</td><td class="ex">Бег 60 м, с <span class="tag r">обязательно</span><div class="q">скоростные возможности</div></td><td class="v">12,0</td><td class="v">11,2</td><td class="v">10,5</td><td class="v">12,4</td><td class="v">11,6</td><td class="v">10,9</td></tr><tr class="req"><td class="n">2</td><td class="ex">Смешанное передвижение 2 км (бег + ходьба), мин с <span class="tag r">обязательно</span><div class="q">выносливость</div></td><td class="v">14,00</td><td class="v">13,00</td><td class="v">12,30</td><td class="v">15,30</td><td class="v">13,40</td><td class="v">12,00</td></tr><tr class="req"><td class="n">3</td><td class="ex">Подтягивание из виса на высокой перекладине (юн) / из виса лёжа (дев), раз <span class="tag r">обязательно</span><div class="q">сила</div></td><td class="v">2</td><td class="v">4</td><td class="v">7</td><td class="v">7</td><td class="v">12</td><td class="v">16</td></tr><tr class="req"><td class="n">4</td><td class="ex">Наклон вперёд с прямыми ногами <span class="tag r">обязательно</span><div class="q">гибкость</div></td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td></tr><tr class="opt"><td class="n">5</td><td class="ex">Прыжок в длину с места, см <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">130</td><td class="v">145</td><td class="v">165</td><td class="v">125</td><td class="v">140</td><td class="v">155</td></tr><tr class="opt"><td class="n">6</td><td class="ex">Челночный бег 3×10 м, с <span class="tag b">по выбору</span><div class="q">координационные качества</div></td><td class="v">9,8</td><td class="v">9,2</td><td class="v">8,5</td><td class="v">10,3</td><td class="v">9,7</td><td class="v">9,1</td></tr><tr class="opt"><td class="n">7</td><td class="ex">Метание мяча 150 г, м <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">21</td><td class="v">26</td><td class="v">31</td><td class="v">14</td><td class="v">19</td><td class="v">24</td></tr><tr class="opt"><td class="n">8</td><td class="ex">Бег на лыжах 2 км, мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">12,30</td><td class="v">10,40</td><td class="v">9,30</td><td class="v">13,30</td><td class="v">11,40</td><td class="v">10,30</td></tr><tr class="opt"><td class="n">9</td><td class="ex">Плавание 50 м <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">—</td><td class="v">без учёта времени</td><td class="v">28,50 с</td><td class="v">—</td><td class="v">без учёта времени</td><td class="v">31,50 с</td></tr>
+</table>
+<div class="need"><b>Для получения знака:</b> 🥉 бронза и 🥈 серебро — выполнить все обязательные + 1 по выбору; 🥇 золото — все обязательные + 2 по выбору. Все сданные испытания должны быть на уровне одного и того же знака.</div>
+
+<h2>Ступень III — 10–11 лет (4–5 классы)</h2>
+<table>
+<tr><th>№</th><th>Испытание</th>
+    <th colspan="3">Юноши</th><th colspan="3">Девушки</th></tr>
+<tr class="sub"><th></th><th></th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th></tr>
+<tr class="req"><td class="n">1</td><td class="ex">Бег 60 м, с <span class="tag r">обязательно</span><div class="q">скоростные возможности</div></td><td class="v">10,9</td><td class="v">10,0</td><td class="v">9,5</td><td class="v">11,4</td><td class="v">10,5</td><td class="v">10,0</td></tr><tr class="req"><td class="n">2</td><td class="ex">Кросс по пересечённой местности 2 км, мин с <span class="tag r">обязательно</span><div class="q">выносливость</div></td><td class="v">12,10</td><td class="v">11,10</td><td class="v">10,10</td><td class="v">12,30</td><td class="v">11,30</td><td class="v">10,30</td></tr><tr class="req"><td class="n">3</td><td class="ex">Подтягивание из виса на высокой перекладине (юн), раз / Сгибание и разгибание рук в упоре лёжа на полу (дев), раз <span class="tag r">обязательно</span><div class="q">сила</div></td><td class="v">3</td><td class="v">6</td><td class="v">9</td><td class="v">9</td><td class="v">13</td><td class="v">18</td></tr><tr class="req"><td class="n">4</td><td class="ex">Наклон вперёд с прямыми ногами <span class="tag r">обязательно</span><div class="q">гибкость</div></td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td></tr><tr class="opt"><td class="n">5</td><td class="ex">Прыжок в длину с места, см <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">140</td><td class="v">155</td><td class="v">175</td><td class="v">135</td><td class="v">150</td><td class="v">170</td></tr><tr class="opt"><td class="n">6</td><td class="ex">Челночный бег 3×10 м, с <span class="tag b">по выбору</span><div class="q">координационные качества</div></td><td class="v">9,2</td><td class="v">8,7</td><td class="v">8,2</td><td class="v">9,7</td><td class="v">9,2</td><td class="v">8,7</td></tr><tr class="opt"><td class="n">7</td><td class="ex">Метание мяча 150 г, м <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">24</td><td class="v">29</td><td class="v">34</td><td class="v">16</td><td class="v">21</td><td class="v">26</td></tr><tr class="opt"><td class="n">8</td><td class="ex">Бег на лыжах 3 км, мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">18,00</td><td class="v">16,30</td><td class="v">14,30</td><td class="v">19,30</td><td class="v">17,30</td><td class="v">15,30</td></tr><tr class="opt"><td class="n">9</td><td class="ex">Смешанное передвижение 3 км (бег + ходьба), мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">—</td><td class="v">17,00</td><td class="v">15,30</td><td class="v">18,30</td><td class="v">16,30</td><td class="v">15,00</td></tr><tr class="opt"><td class="n">10</td><td class="ex">Плавание 50 м <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">—</td><td class="v">31,50 с</td><td class="v">28,00 с</td><td class="v">—</td><td class="v">33,50 с</td><td class="v">30,50 с</td></tr>
+</table>
+<div class="need"><b>Для получения знака:</b> 🥉 бронза и 🥈 серебро — выполнить все обязательные + 1 по выбору; 🥇 золото — все обязательные + 2 по выбору. Все сданные испытания должны быть на уровне одного и того же знака.</div>
+
+<h2>Ступень IV — 12–13 лет (6–7 классы)</h2>
+<table>
+<tr><th>№</th><th>Испытание</th>
+    <th colspan="3">Юноши</th><th colspan="3">Девушки</th></tr>
+<tr class="sub"><th></th><th></th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th></tr>
+<tr class="req"><td class="n">1</td><td class="ex">Бег 60 м, с <span class="tag r">обязательно</span><div class="q">скоростные возможности</div></td><td class="v">9,9</td><td class="v">9,2</td><td class="v">8,5</td><td class="v">10,6</td><td class="v">9,9</td><td class="v">9,2</td></tr><tr class="req"><td class="n">2</td><td class="ex">Кросс по пересечённой местности 3 км, мин с <span class="tag r">обязательно</span><div class="q">выносливость</div></td><td class="v">17,10</td><td class="v">15,40</td><td class="v">14,00</td><td class="v">19,40</td><td class="v">18,10</td><td class="v">16,30</td></tr><tr class="req"><td class="n">3</td><td class="ex">Подтягивание из виса на высокой перекладине (юн), раз / Сгибание и разгибание рук в упоре лёжа на полу (дев), раз <span class="tag r">обязательно</span><div class="q">сила</div></td><td class="v">5</td><td class="v">9</td><td class="v">14</td><td class="v">9</td><td class="v">13</td><td class="v">17</td></tr><tr class="req"><td class="n">4</td><td class="ex">Наклон вперёд с прямыми ногами <span class="tag r">обязательно</span><div class="q">гибкость</div></td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td></tr><tr class="opt"><td class="n">5</td><td class="ex">Прыжок в длину с места, см <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">150</td><td class="v">165</td><td class="v">185</td><td class="v">140</td><td class="v">155</td><td class="v">175</td></tr><tr class="opt"><td class="n">6</td><td class="ex">Челночный бег 3×10 м, с <span class="tag b">по выбору</span><div class="q">координационные качества</div></td><td class="v">8,9</td><td class="v">8,4</td><td class="v">7,9</td><td class="v">9,5</td><td class="v">9,0</td><td class="v">8,5</td></tr><tr class="opt"><td class="n">7</td><td class="ex">Метание мяча 150 г, м <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">27</td><td class="v">32</td><td class="v">37</td><td class="v">18</td><td class="v">23</td><td class="v">28</td></tr><tr class="opt"><td class="n">8</td><td class="ex">Бег на лыжах 3 км, мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">16,30</td><td class="v">15,00</td><td class="v">13,30</td><td class="v">18,00</td><td class="v">16,30</td><td class="v">15,00</td></tr><tr class="opt"><td class="n">9</td><td class="ex">Поднимание туловища из положения лёжа за 1 мин, раз <span class="tag b">по выбору</span><div class="q">сила</div></td><td class="v">30</td><td class="v">35</td><td class="v">45</td><td class="v">25</td><td class="v">30</td><td class="v">40</td></tr><tr class="opt"><td class="n">10</td><td class="ex">Плавание 50 м <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">—</td><td class="v">30,00 с</td><td class="v">26,50 с</td><td class="v">—</td><td class="v">32,50 с</td><td class="v">29,50 с</td></tr><tr class="opt"><td class="n">11</td><td class="ex">Стрельба из пневматической винтовки, очки <span class="tag b">по выбору</span><div class="q">прикладные навыки</div></td><td class="v">30</td><td class="v">45</td><td class="v">60</td><td class="v">30</td><td class="v">45</td><td class="v">60</td></tr>
+</table>
+<div class="need"><b>Для получения знака:</b> 🥉 бронза и 🥈 серебро — выполнить все обязательные + 1 по выбору; 🥇 золото — все обязательные + 2 по выбору. Все сданные испытания должны быть на уровне одного и того же знака.</div>
+
+<h2>Ступень V — 14–15 лет (8–9 классы)</h2>
+<table>
+<tr><th>№</th><th>Испытание</th>
+    <th colspan="3">Юноши</th><th colspan="3">Девушки</th></tr>
+<tr class="sub"><th></th><th></th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th></tr>
+<tr class="req"><td class="n">1</td><td class="ex">Бег 60 м, с <span class="tag r">обязательно</span><div class="q">скоростные возможности</div></td><td class="v">9,2</td><td class="v">8,7</td><td class="v">8,0</td><td class="v">10,4</td><td class="v">9,8</td><td class="v">9,0</td></tr><tr class="req"><td class="n">2</td><td class="ex">Кросс по пересечённой местности 3 км (юн) / 2 км (дев), мин с <span class="tag r">обязательно</span><div class="q">выносливость</div></td><td class="v">16,10</td><td class="v">14,40</td><td class="v">13,20</td><td class="v">13,30</td><td class="v">12,10</td><td class="v">11,00</td></tr><tr class="req"><td class="n">3</td><td class="ex">Подтягивание из виса на высокой перекладине (юн), раз / Сгибание и разгибание рук в упоре лёжа на полу (дев), раз <span class="tag r">обязательно</span><div class="q">сила</div></td><td class="v">7</td><td class="v">11</td><td class="v">15</td><td class="v">12</td><td class="v">15</td><td class="v">20</td></tr><tr class="req"><td class="n">4</td><td class="ex">Наклон вперёд с прямыми ногами <span class="tag r">обязательно</span><div class="q">гибкость</div></td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td></tr><tr class="opt"><td class="n">5</td><td class="ex">Прыжок в длину с места, см <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">160</td><td class="v">175</td><td class="v">195</td><td class="v">145</td><td class="v">160</td><td class="v">180</td></tr><tr class="opt"><td class="n">6</td><td class="ex">Челночный бег 3×10 м, с <span class="tag b">по выбору</span><div class="q">координационные качества</div></td><td class="v">8,7</td><td class="v">8,2</td><td class="v">7,7</td><td class="v">9,4</td><td class="v">8,9</td><td class="v">8,4</td></tr><tr class="opt"><td class="n">7</td><td class="ex">Метание мяча 150 г, м <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">30</td><td class="v">35</td><td class="v">40</td><td class="v">19</td><td class="v">24</td><td class="v">29</td></tr><tr class="opt"><td class="n">8</td><td class="ex">Бег на лыжах 3 км, мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">16,00</td><td class="v">14,30</td><td class="v">13,00</td><td class="v">17,30</td><td class="v">16,00</td><td class="v">14,30</td></tr><tr class="opt"><td class="n">9</td><td class="ex">Бег 1500 м, мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">8,20</td><td class="v">7,30</td><td class="v">6,50</td><td class="v">9,00</td><td class="v">8,10</td><td class="v">7,20</td></tr><tr class="opt"><td class="n">10</td><td class="ex">Плавание 50 м <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">—</td><td class="v">29,00 с</td><td class="v">25,50 с</td><td class="v">—</td><td class="v">31,50 с</td><td class="v">28,50 с</td></tr><tr class="opt"><td class="n">11</td><td class="ex">Стрельба из пневматической винтовки, очки <span class="tag b">по выбору</span><div class="q">прикладные навыки</div></td><td class="v">30</td><td class="v">45</td><td class="v">60</td><td class="v">30</td><td class="v">45</td><td class="v">60</td></tr>
+</table>
+<div class="need"><b>Для получения знака:</b> 🥉 бронза и 🥈 серебро — выполнить все обязательные + 1 по выбору; 🥇 золото — все обязательные + 2 по выбору. Все сданные испытания должны быть на уровне одного и того же знака.</div>
+
+<h2>Ступень VI — 16–17 лет (10–11 классы)</h2>
+<table>
+<tr><th>№</th><th>Испытание</th>
+    <th colspan="3">Юноши</th><th colspan="3">Девушки</th></tr>
+<tr class="sub"><th></th><th></th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th>
+    <th>🥉 бронза</th><th>🥈 серебро</th><th>🥇 золото</th></tr>
+<tr class="req"><td class="n">1</td><td class="ex">Бег 100 м, с <span class="tag r">обязательно</span><div class="q">скоростные возможности</div></td><td class="v">14,6</td><td class="v">13,8</td><td class="v">12,8</td><td class="v">17,6</td><td class="v">16,3</td><td class="v">15,3</td></tr><tr class="req"><td class="n">2</td><td class="ex">Кросс по пересечённой местности 3 км (юн) / 2 км (дев), мин с <span class="tag r">обязательно</span><div class="q">выносливость</div></td><td class="v">15,00</td><td class="v">13,40</td><td class="v">12,30</td><td class="v">13,20</td><td class="v">12,10</td><td class="v">10,50</td></tr><tr class="req"><td class="n">3</td><td class="ex">Рывок гири 16 кг (юн), раз / Сгибание и разгибание рук в упоре лёжа на полу (дев), раз <span class="tag r">обязательно</span><div class="q">сила</div></td><td class="v">10</td><td class="v">15</td><td class="v">25</td><td class="v">10</td><td class="v">14</td><td class="v">18</td></tr><tr class="req"><td class="n">4</td><td class="ex">Наклон вперёд с прямыми ногами <span class="tag r">обязательно</span><div class="q">гибкость</div></td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td><td class="v">пальцы на полу</td><td class="v">пальцы ниже пола</td><td class="v">ладони на полу</td></tr><tr class="opt"><td class="n">5</td><td class="ex">Прыжок в длину с места, см <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">165</td><td class="v">180</td><td class="v">200</td><td class="v">150</td><td class="v">165</td><td class="v">185</td></tr><tr class="opt"><td class="n">6</td><td class="ex">Челночный бег 3×10 м, с <span class="tag b">по выбору</span><div class="q">координационные качества</div></td><td class="v">8,5</td><td class="v">8,0</td><td class="v">7,5</td><td class="v">9,3</td><td class="v">8,8</td><td class="v">8,3</td></tr><tr class="opt"><td class="n">7</td><td class="ex">Метание мяча 150 г, м <span class="tag b">по выбору</span><div class="q">скоростно-силовые качества</div></td><td class="v">32</td><td class="v">37</td><td class="v">42</td><td class="v">20</td><td class="v">25</td><td class="v">30</td></tr><tr class="opt"><td class="n">8</td><td class="ex">Бег на лыжах 5 км (юн) / 3 км (дев), мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">26,00</td><td class="v">24,30</td><td class="v">22,30</td><td class="v">18,00</td><td class="v">16,30</td><td class="v">15,00</td></tr><tr class="opt"><td class="n">9</td><td class="ex">Бег 1500 м, мин с <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">7,40</td><td class="v">6,50</td><td class="v">6,00</td><td class="v">8,40</td><td class="v">7,40</td><td class="v">6,50</td></tr><tr class="opt"><td class="n">10</td><td class="ex">Плавание 50 м <span class="tag b">по выбору</span><div class="q">выносливость</div></td><td class="v">—</td><td class="v">28,00 с</td><td class="v">25,00 с</td><td class="v">—</td><td class="v">30,50 с</td><td class="v">27,50 с</td></tr><tr class="opt"><td class="n">11</td><td class="ex">Стрельба из пневматической винтовки, очки <span class="tag b">по выбору</span><div class="q">прикладные навыки</div></td><td class="v">30</td><td class="v">45</td><td class="v">60</td><td class="v">30</td><td class="v">45</td><td class="v">60</td></tr>
+</table>
+<div class="need"><b>Для получения знака:</b> 🥉 бронза и 🥈 серебро — выполнить все обязательные + 1 по выбору; 🥇 золото — все обязательные + 2 по выбору. Все сданные испытания должны быть на уровне одного и того же знака.</div>
+
+
+<h2>Порядок сдачи и безопасность</h2>
+<div class="need">
+• Испытания сдаются в течение учебного года в центрах тестирования ГТО.<br>
+• Перед каждой попыткой — разминка 8–10 минут.<br>
+• Бег на выносливость сдаётся в конце занятия, а не на «холодные» мышцы.<br>
+• Участнику даётся право на одну повторную попытку в день испытания.<br>
+• При недомогании сдачу откладывают — здоровье важнее любой таблицы.
+</div>
+
+<h2>Школьные нормативы (по цифрам и качеству)</h2>
+<table>
+<tr><th>№</th><th>Упражнение</th><th>Нужно выполнить</th><th>Качество выполнения</th></tr>
+<tr><td class="n">1</td><td class="ex">Бег 30 м, с<div class="q">скоростные возможности</div></td><td class="v wide">1–2 кл: 6,5–7,5 | 3–4 кл: 6,0–6,9 | 5–6 кл: 5,6–6,4 | 7–8 кл: 5,2–6,0 | 9–11 кл: 4,8–5,6</td><td class="q wide">Корпус слегка наклонён, свободный мах руками, финиш без замедления за 2–3 шага после линии</td></tr><tr><td class="n">2</td><td class="ex">Бег 60 м, с<div class="q">скоростные возможности</div></td><td class="v wide">3–4 кл: 10,5–11,8 | 5–6 кл: 10,0–11,0 | 7–8 кл: 9,4–10,2 | 9–11 кл: 8,6–9,4</td><td class="q wide">Высокий старт, разгона не терять на середине, финиш грудью вперёд</td></tr><tr><td class="n">3</td><td class="ex">Бег 1000 м (дев) / 1500 м и более (юн), мин с<div class="q">выносливость</div></td><td class="v wide">1–2 кл: 1000 м 7,30–9,00 | 3–4 кл: 7,00–8,30 | 5–6 кл: 6,30–8,00 | 7–8 кл: 6,00–7,30 | 9–11 кл: 5,30–7,00</td><td class="q wide">Равномерный темп, дышать ритмично (3 шага — вдох, 3 — выдох), не останавливаться</td></tr><tr><td class="n">4</td><td class="ex">Подтягивание на перекладине (юн), раз<div class="q">сила</div></td><td class="v wide">1–2 кл: 2–5 | 3–4 кл: 4–8 | 5–6 кл: 6–10 | 7–8 кл: 8–12 | 9–11 кл: 10–14</td><td class="q wide">Подбородок выше перекладины, без рывков и раскачиваний, руки выпрямлять полностью</td></tr><tr><td class="n">5</td><td class="ex">Сгибание и разгибание рук в упоре лёжа (дев), раз<div class="q">сила</div></td><td class="v wide">1–2 кл: 6–10 | 3–4 кл: 8–12 | 5–6 кл: 10–14 | 7–8 кл: 12–16 | 9–11 кл: 14–18</td><td class="q wide">Туловище прямое, касание грудью пола, руки сгибать не менее чем до 90°</td></tr><tr><td class="n">6</td><td class="ex">Прыжок в длину с места, см<div class="q">скоростно-силовые качества</div></td><td class="v wide">1–2 кл: 110–140 | 3–4 кл: 125–155 | 5–6 кл: 140–170 | 7–8 кл: 155–185 | 9–11 кл: 170–200</td><td class="q wide">Отталкивание двумя ногами одновременно, приземление на обе ступни, без падения назад</td></tr><tr><td class="n">7</td><td class="ex">Наклон вперёд из положения стоя<div class="q">гибкость</div></td><td class="v wide">Все классы: пальцы на полу — пальцы ниже пола — ладони на полу</td><td class="q wide">Колени прямые, наклон выполняется плавно без рывков</td></tr><tr><td class="n">8</td><td class="ex">Челночный бег 3×10 м, с<div class="q">координационные качества</div></td><td class="v wide">1–2 кл: 9,8–11,0 | 3–4 кл: 9,3–10,3 | 5–6 кл: 8,9–9,7 | 7–8 кл: 8,5–9,2 | 9–11 кл: 8,2–8,8</td><td class="q wide">Полное касание линии поворота рукой, обегание без сбавления темпа</td></tr><tr><td class="n">9</td><td class="ex">Поднимание туловища за 1 мин, раз<div class="q">сила мышц живота</div></td><td class="v wide">1–2 кл: 15–22 | 3–4 кл: 20–28 | 5–6 кл: 25–33 | 7–8 кл: 30–38 | 9–11 кл: 33–42</td><td class="q wide">Колени согнуты, руки за головой, лопатки отрывать полностью, без рывка руками</td></tr><tr><td class="n">10</td><td class="ex">Метание мяча 150 г, м<div class="q">скоростно-силовые качества</div></td><td class="v wide">1–2 кл: 12–20 | 3–4 кл: 16–27 | 5–6 кл: 20–32 | 7–8 кл: 24–36 | 9–11 кл: 28–40</td><td class="q wide">Мяч по прямой траектории, без схода за линию, бросок с полного разгона руки</td></tr>
+</table>
+
+<div class="note">Знак отличия ГТО: 🥉 бронза — базовый уровень, 🥈 серебро — средний, 🥇 золото — высший. Знаки вручаются по результатам всех сданных испытаний ступени.</div>
+
+<a class="btn" href="index.html">← На главную</a>
+</main>
+</body>
+</html>
